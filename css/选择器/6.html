@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p::after {
+            content: "￥";
+        }
+        /* 在p元素里面创建一个after元素 */
+        p::before {
+            content: ".00";
+        }
+        /* 在p元素里面创建一个before元素 */
+    </style>
+</head>
+
+<body>
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis assumenda atque quas temporibus, dolor tempore labore enim pariatur rem, ex, facilis velit quisquam saepe. Repellendus quasi quod fuga ipsum repellat.</div>
+    <input type="text" placeholder="请输入钱的数目">
+    <p>199</p>
+    <p>299</p>
+    <p>399</p>
+    <p>499</p>
+    <div>
+        <p>请结合源码查看如何实现</p>
+    </div>
+</body>
+
+</html>

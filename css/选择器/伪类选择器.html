@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* a:link {
+            color: orangered;
+        }
+        a:visited {
+            color: darkblue;
+        } */
+        /* 文字悬浮 */
+        div:lang(zh-CN) {
+            color: yellowgreen;
+        }
+
+        span:hover {
+            color: blueviolet;
+            font-size: larger;
+        }
+
+        /* 选中激活的span */
+        span:active {
+            color: red;
+            font-style: italic;
+            font-size: larger;
+        }
+
+        input:focus {
+            color: brown;
+            background-color: aqua;
+        }
+
+        select:focus {
+            color: cornflowerblue;
+            background-color: black;
+        }
+        code {
+            color: indigo;
+            font-size: 15px;
+            font-style: italic;
+            font-weight: 400;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>伪类选择器</h1>
+    <h3>动态伪类</h3>
+    <div>
+        <div>
+            <p>访问以下两个标签</p>
+            <a href="https://www.baidu.com">去百度</a>
+            <a href="https://www.jd.com">去京东</a>
+            <p>疑问如何实现的点击过后标签颜色的变化，能不能自定义</p>
+            <div>
+                <ul>
+                    <li>
+                        类选择器无法实现这种效果
+                        <hr>
+                        <code>
+                        .no {
+                            color : orange;
+                        }
+                        &lt;a class="no" href="www.baidu.com"&gt;去百度&lt;/a&gt;
+                    </code>
+                        因为这样无法选择点击前和点击后
+                    </li>
+                    <li>
+                        &lt;style&gt;<br>
+                        a:link {<br>
+                        color: orangered;
+                        } <br>
+                        a:visited {<br>
+                        color: darkblue;
+                        } <br>;/style&gt;
+
+                    </li>
+                    <li>
+                        伪类：很像类但是并不是，带上状态的类而已
+                        <hr>
+                    </li>
+                    <li>
+                        举例：<br><code>
+                        &lt;style&gt;<br>
+                    a:link 未访问{<br>
+                        color: orangered;
+                    } <br>
+                    a:visited 访问过{<br>
+                        color: darkblue;
+                    } <br>;/style&gt;<br>
+                    a:hover 鼠标悬浮时{<br>
+                        color: darkblue;
+                    } <br>;/style&gt;<br>
+                    a:active 点击未松手{<br>
+                        color: darkblue;
+                    } <br>;/style&gt;<br>
+                    </code>
+                    </li>
+                    <li>
+                        <ol>
+                            <li>link</li>
+                            <li>link hover</li>
+                            <li>link hover active</li>
+                            <li>access</li>
+                        </ol>
+                    </li>
+                    <li>因为点击a标签经过以上四个过程，每一个都是重合的，css的顺序不能变！！</li>
+                </ul>
+            </div>
+        </div>
+        <p>例子</p>
+        <hr>
+        <span>坤！</span>
+
+        <div>
+            <p>获取焦点</p>
+            <p>三个输入框表单如何实现定位的输入框颜色和其他的不一样</p>
+            <br>
+            <code><input type="text"></code>
+            <code><input type="text"></code>
+            <code><input type="text"></code>
+            <p>利用input:focus来控制</p>
+            <select name="list" id="test">
+                <option value="bj">北京</option>
+                <option value="sh">上海</option>
+            </select>
+        </div>
+    </div>
+
+    <h3>结构伪类_1</h3>
+    <div>
+        <div>
+            <ul>
+                <li>假如有以下的例子</li>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+
+                <li>我想让第一个数字总是保持红色，但是数字本身的顺序会发生变化如何实现</li>
+
+            </ul>
+            <p>举例： <br><code>
+                .fisrt {
+                    color: red;
+                }
+                <br>
+                &lt;p class="fisrt"&gt;1&lt;/p&&gt;
+            </code></p>
+            <p>但是无法实现变化，变化的数字无法固定在某一个标签内，first属性内的数字不一定在第一个</p>
+        </div>
+
+        <div>
+            <p>张三: 98分</p><br>
+            <p>李四: 88分</p><br>
+            <p>王五: 78分</p><br>
+            <p>赵六: 68分</p><br>
+        </div>
+        <p>如下写法<code>
+            div>p:first-child {
+                color : red ;
+            }
+            <br>/*选中的是div的第一个子代p*/
+        </code><br>完美解决了如何实现第一个总是红色的</p>
+        <br>
+        <p>但是first-child指从div里面第一个元素是不是p，如果是就是红色，如果不是则无</p>
+        <br>
+        <p>选择器写成 div p:first-child 就可以解决（但是结构杂糅还是会出问题）</p>
+        <div>
+            <code>
+                    &lt;style&gt;<br>
+                        div p:first-child {<br>
+                                color:red;<br>
+                        }<br>
+                    &lt;/style&gt;
+                    &lt;p&gt;测试1&lt;/p&gt;<br>
+                    &lt;p&gt;测试2&lt;/p&gt;<br>
+                    &lt;marquee&gt;<br>
+                    &lt;p&gt;测试3&lt;/p&gt;<br>
+                    &lt;p&gt;张三: 98分&lt;/p&gt;<br>
+                    &lt;/marquee&gt;<br>
+                    &lt;p&gt;李四: 88分&lt;/p&gt;<br>
+                    &lt;p&gt;王五: 78分&lt;/p&gt;<br>
+                    &lt;p&gt;赵六: 68分&lt;p&gt;<br>
+            </code>
+        </div>
+        <p>以上例子点击此处查看<a href="./2.html" target="_blank">look</a></p>
+        <br>
+        <p>重点在于子代选择器这个first的含义</p>
+
+        <div>
+            <code>
+                &lt;style&gt;<br>
+                        p:first-child {<br>
+                                color:red;<br>
+                        }<br>
+                    &lt;/style&gt;
+            </code>
+            <ul>
+                <li>此时含义有不同了，只要是父元素的第一个元素是p就会变成红色</li>
+                <li></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <h3>结构伪类_2</h3>
+    <div>
+        <div>
+            <ul>
+                <li>在1中介绍了什么为first-child</li>
+                <li>相似的我们也有许多变种</li>
+            </ul>
+            <code>
+                    &lt;style&gt;<br>
+                            div>p:last-child {<br>
+                                    color:red;<br>
+                            }<br>
+                        &lt;/style&gt;
+                </code>
+            <p>即指div所有的子元素的最后一个是否是p，是则染色(按所有元素来看)</p>
+        </div>
+        <div>
+            <p>如果我想看特定顺序的child怎么办</p>
+            <br>
+            <code>
+                &lt;style&gt;<br>
+                            div>p:nth-child(3) {<br>
+                                    color:red;<br>
+                            }<br>
+                        &lt;/style&gt;
+            </code>
+            <p>指明的第3个元素是否是p，如果是则染色</p>
+            <p>括号内可以填n 2n 2n+1 even(偶数) odd(奇数)一类，自行看<a href="./3.html" target="_blank">look</a></p>
+            <p>n值从0开始增加且必须写成an+b的形式，渲染前五个是写作-n+5</p>
+
+        </div>
+        <div>
+            <p>找到特定类型的儿子元素</p>
+            <code>
+                &lt;style&gt;<br>
+                            div>p:first-of-type {<br>
+                                    color:red;<br>
+                            }<br>
+                        &lt;/style&gt;
+            </code>
+            <code>
+                &lt;style&gt;<br>
+                            div>p:last-of-type {<br>
+                                    color:red;<br>
+                            }<br>
+                        &lt;/style&gt;
+            </code>
+            <p>在同元素的兄弟之间第一个或者最后一个！</p>
+            <code>
+                &lt;style&gt;<br>
+                            div>p:nth-of-type(3) {<br>
+                                    color:red;<br>
+                            }<br>
+                        &lt;/style&gt;
+            </code>
+            <p>先在div儿子里面找到p然后排序找到第三个</p>
+        </div>
+    </div>
+    <h3>结构伪类_3（不常用）</h3>
+    <div>
+        <code>
+            &lt;style&gt;<br>
+                        div>p:nth-last-child(3) {<br>
+                                color:red;<br>
+                        }<br>
+                    &lt;/style&gt;
+        </code>
+        <p>div倒着数的第3个是否是p,是则染色</p>
+        <code>
+            &lt;style&gt;<br>
+                        div>p:nth-last-of-type(3) {<br>
+                                color:red;<br>
+                        }<br>
+                    &lt;/style&gt;
+        </code>
+        <p>div所有的p儿子倒数第三个</p>
+        <code>
+            &lt;style&gt;<br>
+                        span:only-child {<br>
+                                color:red;<br>
+                        }<br>
+                    &lt;/style&gt;
+        </code>
+        <p>选中的是没有兄弟的span</p>
+        <code>
+            &lt;style&gt;<br>
+                        span:only-of-type {<br>
+                                color:red;<br>
+                        }<br>
+                    &lt;/style&gt;
+        </code>
+        <p>选中的是没有同类型兄弟的元素</p>
+        <code>
+            :root {
+                background-color: red;
+            }
+        </code>
+        <p>选中的是html根元素</p>
+        <code>
+            &lt;style&gt;<br>
+                        div:empty {<br>
+                                height: 100px;<br>
+                                width: 100px; <br>
+                                background-color: red; <br>
+                        }<br>
+                    &lt;/style&gt;
+        </code>
+        <div></div>
+        <code>&lt;div&&gt;&lt;/div&&gt;
+        </code>
+        <p>如上例子，选中没有内容的div</p>
+
+    </div>
+
+
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+
+    <h3>否定伪类</h3>
+    <div>
+        <p>排除某些元素的标记</p>
+        <div>
+            <code>
+            &lt;style&gt;<br>
+                        div>p:not(.fail){<br>
+                            color: red;<br>
+                        }<br>
+                    &lt;/style&gt;
+                    </code>
+        </div>
+        <div>
+            &lt;p class=fail title="kunkun"&gt;张三: 98分&lt;/p&gt;<br>
+            &lt;p class=win title= "kunkun"&gt;李四: 88分&lt;/p&gt;<br>
+            &lt;p id=dingzhen&gt;王五: 78分&lt;/p&gt;<br>
+            &lt;p class=hust&gt;赵六: 68分&lt;p&gt;<br>
+            <hr>
+            <code>
+                &lt;style&gt;<br>
+                            div>p:not([title^="kun"]){<br>
+                                color: red;<br>
+                            }<br>
+                            div>p:not([id^="ding"]) { <br>
+                                color : blue; <br>
+                            } <br>
+                            div>p:not([:first-child]) { <br>
+                                color : green; <br>
+                            } <br>
+                        &lt;/style&gt;
+
+                        </code>
+            <ul>
+                <li>上面三个例子中最后一个不好理解，理解为不要first-child就可以</li>
+                <li>not([:first-child])就指的是选中div所有儿子子元素但是排除了第一个</li>
+                <li>与上面的结构伪类类似</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <h3>UI伪类</h3>
+    <div>
+        <p>复选框只要选择过后都有焦点</p>
+        <div>
+            <input type="checkbox">
+        </div>
+        <div>
+            <code>
+                &lt;style&gt;<br>
+                            input:checked{<br>
+                                width:500px<br>
+                            }<br>
+                        &lt;/style&gt;
+                        </code>
+            <p>checked是指选中的复选框和单选</p>
+            <p>背景色和颜色都不奏效，花里胡哨的选择效果都是用js写的</p>
+            <a href="./4.html">示例</a>
+        </div>
+    </div>
+
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <h3>目标伪类</h3>
+    <div>
+        <div>
+            <code>
+                &lt;style&gt;<br>
+                            div:target{<br>
+                                background-color:green<br>
+                            }<br>
+                        &lt;/style&gt;
+                        </code>
+        </div>
+        <a href="./5.html">举例</a>
+    </div>
+
+
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <h3>语言伪类</h3>
+    <div>
+        <div>
+            <code>
+                &lt;style&gt;<br>
+                            div:lang(en){<br>
+                                background-color:green<br>
+                            }<br>
+                        &lt;/style&gt;
+                        </code>
+        </div>
+        <p>可见源码第一个css里面的样式</p>
+    </div>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <h3>伪元素选择器</h3>
+    <div>
+        <p>lorem随机生成一段文字，加数字限定字数</p>
+        <div>
+            Lorem ipsum dolor sit amet consectetur. 
+        </div>
+        <code>
+            &lt;style&gt;<br>
+                        div::first-letter{<br>
+                            color:green<br>
+                        }<br>
+                    &lt;/style&gt;
+                    </code>
+        <p>选中div 内第一个字母</p>
+        <code>
+            &lt;style&gt;<br>
+                        div::first-line{<br>
+                            background-color: yellow<br>
+                        }<br>
+                    &lt;/style&gt;
+                    </code>
+        <p>选中的是div的第一行</p>
+        <code>
+            &lt;style&gt;<br>
+                        div::selection{<br>
+                            background-color:orange<br>
+                        }<br>
+                    &lt;/style&gt;
+                    </code>
+                    <p>
+                        被鼠标选中的元素
+                    </p>
+    </div>
+    <input type="text" placeholder="输入钱的数目">
+    <span>199.00</span>
+    <span>299.00</span>
+    <span>399.00</span>
+    <span>499.00</span>
+    <span>599.00</span>
+    <p>如何方便输入钱的标识？</p>
+    <a href="./6.html">查看</a>
+</body>
+
+</html>

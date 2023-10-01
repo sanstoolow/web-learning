@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-size: 20px;
+        }
+        .outer {
+            width: 400px;
+            height: 400px;
+            background-color: gray;
+            overflow: hidden;
+        }
+        .inner {
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+            margin: 0 auto;
+            margin-top: 150px;
+            vertical-align: middle;
+            text-align: center;
+            line-height: 100px;
+        }
+
+        .container {
+            width: 400px;
+            height: 400px;
+            background-color: gray;
+            overflow: hidden;
+            text-align: center;
+            /* 这里比较强的一点就是这样的形式里面span可以直接当成文字处理，比较牛逼 */
+            line-height: 400px;
+        }
+        .contener {
+            background-color: orange;
+        }
+        .mosdify {
+            width: 400px;
+            height: 400px;
+            background-color: gray;
+            text-align: center;
+            line-height: 400px;
+        }
+        .ddd {
+            width: 100px;
+            height: 100px;
+            vertical-align: middle;
+        }
+        .dick {
+            display: inline;
+        }
+        .for_playing {
+            font-size: 40px;
+            background-color: orange;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner">inner</div>
+    </div>
+    <hr>
+    <div class="container">
+        <span class="contener">出来玩啊</span>
+    </div>
+    <hr>
+    <div class="mosdify">
+        <div class="dick"><span class="for_playing">出来玩啊</span></div>
+        <div class="dick"><img src=".././favicon.ico" alt="标签" class="ddd"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .widing {
+            width: 400px;
+            background-color: skyblue;
+        }
+        img {
+            margin-left: 1em;
+            margin-right: 1em;
+            margin-bottom: 1em;
+        }
+        .test::first-letter {
+            font-size: 80px;
+            font-weight: 400px;
+            float: left;
+        }
+        .boxcon{
+            width: 600px;
+            height: 400px;
+            background-color: green;
+            padding: 1em;
+        }
+        .box {
+            font-size: 20px;
+            padding: 1em;
+        }
+        .box1{
+            
+            background-color: skyblue;
+        }
+        .box2{
+            background-color: orange;
+        }
+        .box3{
+            background-color: gray;
+        }
+        .outer {
+            width: 500px;
+            background-color: gray;
+            border: 1px black solid;
+        }
+        .container {
+            width: 100px;
+            background-color: skyblue;
+            border: 1px black solid;
+            height: 100px;
+            margin: 1em;
+        }
+        .container1 {
+            float: left;
+        }
+        .container2 {
+            float: left;
+        }
+        .container3 {
+            float: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="widing">
+        <img src="../images/bg.jpg" alt="bg" style="width: 200px;float: left;">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius nihil aperiam molestiae cupiditate enim ab quam
+        blanditiis, magni, id hic, voluptatibus doloremque tenetur minima minus officiis impedit ex dolore quae
+        distinctio. In ipsum tempora eum. Dolorum, iste odio! Iure facilis architecto distinctio maxime cum at
+        exercitationem blanditiis, rerum esse consequuntur.
+    </div>
+    <div class="test">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum asperiores omnis earum perspiciatis aliquam
+        nostrum ratione fugiat esse est odit deserunt dolorem quo incidunt dolore, libero necessitatibus laborum nihil
+        laudantium. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam non quam, harum laborum sapiente
+        ratione itaque, esse ab voluptatem asperiores ipsa tempora distinctio quia veritatis nesciunt doloribus nam,
+        eius voluptate?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum asperiores omnis earum perspiciatis aliquam
+        nostrum ratione fugiat esse est odit deserunt dolorem quo incidunt dolore, libero necessitatibus laborum nihil
+        laudantium.
+    </div>
+
+    <hr>
+    <hr>
+    <hr>
+    <div>浮动到底有什么特点？</div>
+    <div class="boxcon">
+        <div class="box box1">盒子1</div>     
+        <div class="box box2">盒子2</div>     
+        <div class="box box3">盒子3</div>     
+    </div>
+    <div class="boxcon">
+        <div class="box box1">盒子1</div>     
+        <div class="box box2" style="float: left;">盒子2</div>     
+        <div class="box box3">盒子3</div>     
+    </div>
+    <p>p浮动之后，脱离了文档流，且不再是符合行或者块元素的特点，宽高由内容撑开，且可以和其他元素公用一行，宽高也可以自己设置</p>
+    <p>mairgin也是可以完美设置的，padding同理，无margin合并的问题，也不会像行内块一样可以当作文本处理</p>
+
+
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <div class="outer">
+        <div class="container container1">1</div>
+        <div class="container container2">2</div>
+        <div class="container container3">3</div>
+    </div>
+    <p>所有人都浮动然后父元素没有内容只剩下边框</p>
+
+    <div>
+        元素浮动的影响
+        <p>后面的兄弟元素，会占据浮动元素的位置，但是文字内容会浮动在浮动元素周围，对前面的元素没有什么影响</p>
+        <p>浮动元素不能撑起父元素的高度，导致父元素塌陷，但是父元素 宽度依然舒服浮动元素</p>
+    </div>
+</body>
+
+</html>

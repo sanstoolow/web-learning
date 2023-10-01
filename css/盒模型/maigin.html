@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .d1 {
+            width: 400px;
+            height: 400px;
+            background-color: skyblue;
+
+            margin: black;
+            margin-left: 20px black;
+            margin-right: 20px black;
+            margin-top: 20px black;
+            margin-bottom: 20px black;
+        }
+
+        .outer {
+            width: 400px;
+            height: 400px;
+            padding: 50px;
+            background-color: orange;
+        }
+
+        .inner {
+
+            /* 对于div这样的块元素，margin这样的属性是可以完美设置的 */
+            width: 100px;
+            height: 100px;
+            background-color: gray;
+            margin: 100px;
+        }
+
+        .one {
+            background-color: green;
+        }
+
+        .two {
+            background-color: deepskyblue;
+            margin-left: 200px;
+            margin-right: 20px;
+            /* 对于span这样的行内元素，是没有上下margin这样的概念的，左右依然成立 */
+            margin-top: 2000px;
+        }
+
+        .three {
+            /* margin: auto; */
+            margin-left: auto;
+            margin-right: auto;
+            /* auto是指能够离body多远就离多远 */ 
+            margin: 0 auto ;
+            /* 这样就可以实现居中 （必须是块元素，因为 0 auto这样的写法仅对块元素有效）*/
+            background-color: honeydew;
+            margin: -100px;
+            /* margin也可以是负值，让下面的元素可以实现覆盖的效果 */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="d1"></div>
+
+    <div class="outer">
+        <div class="inner"></div>
+    </div>
+    <span class="one">顶针</span><span class="two">王源</span><span class="three">芙蓉瑞克</span>
+</body>
+
+</html>

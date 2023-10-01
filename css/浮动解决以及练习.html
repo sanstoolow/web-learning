@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .outer {
+            width: 500px;
+            background-color: gray;
+            border: 1px black solid;
+        }
+
+        .outering {
+            /* height: 122px; */
+            /* float: left; */
+            /* overflow: hidden; */
+            width: 500px;
+            background-color: gray;
+            border: 1px black solid;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: skyblue;
+            border: 1px black solid;
+            margin: 1em;
+        }
+
+        .box1,
+        .box2,
+        .box3 {
+            float: left;
+        }
+
+        .boxing1,
+        .boxing2,
+        .boxing3 {
+            float: left;
+        }
+
+        /* .boxing4 {
+            clear: left;
+             消除之前所有左漂浮的元素的影响 
+            clear: right;
+            clear: both;
+
+        } */
+        .mf {
+            clear: both;
+        }
+
+        .outer::after {
+            /* 优雅的解决方案 */
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        .outering::after {
+            /* 优雅的解决方案 */
+            content: "";
+            display: block;
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outer">
+        <div class="box box1">1</div>
+        <div class="box box2">2</div>
+        <div class="box box3">3</div>
+        <!-- <div class="box box4">4</div> -->
+    </div>
+    <br>
+    <br>
+    <br>
+    <div>问题：父元素没有高度 后面的兄弟元素被影响</div>
+    <div class="outering">
+        <div class="box boxing1">1</div>
+        <div class="box boxing2">2</div>
+        <div class="box boxing3">3</div>
+        <div class="box boxing4">4</div>
+        <!-- 但是这里4还是会被挤出去！！！！！！ -->
+        <!-- <div class="mf"></div> -->
+    </div>
+    <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat dolorem amet nihil eaque at temporibus
+        reprehenderit minima maiores excepturi quisquam debitis eveniet, nobis, rem, deleniti quidem ipsa omnis officiis
+        sed!</div>
+    <p>布局：最好一个部分必须要么全飘要么不飘！</p>
+    <a href="./浮动解决以及练习.html">练习成果</a>
+
+
+
+
+</body>
+
+</html>

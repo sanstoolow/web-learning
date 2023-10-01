@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul {
+            /* 列表符号 */
+            list-style-type: decimal;
+            /* 列表符号的位置 */
+            list-style-position: outside;
+            /* 自定义列表符号（用图片代替） */
+            list-style-image: url(../images/g12.jpg);
+            /* 复合属性 */
+            list-style: decimal outside url(../images/g12.jpg);
+        }
+        li {
+            background-color: skyblue;
+        }
+        table {
+            /* border-width: 2px; */
+            /* border-color: greenyellow; */
+            /* border-style: solid; */
+            /* solid实线 dashed虚线 dotted点线 double双实线 */
+            border: 2px greenyellow solid;
+            /* 控制列宽 */
+            table-layout: fixed;
+            /* 单元格间距 */
+            border-spacing: 2cap;
+            /* 合并相邻单元格的边框 (会使单元格间距设置失效)*/
+            border-collapse: collapse;
+            /* 隐藏没有内容的单元格 */
+            empty-cells: hide;
+            /* 设置表格标题的位置 */
+            caption-side: bottom;
+        }
+        td,th {
+            border: 2px rgba(245,44, 55, 0.8) solid;
+            /* border属性是非常通用的属性 */
+        }
+        .kk {
+            width: 400px;
+            height: 400px;
+            border: 2px black solid;
+            font-size: 40px;
+            /* 设置背景颜色 */
+            background-color: skyblue;
+            /* 设置背景图片(图片很小的话会反复填充至充满，如果很大只会部分展示) */
+            background-image: url(../images/dq.jpg);
+            /* 设置背景图片的重复方式 */
+            background-repeat: no-repeat;
+            /* 控制背景图片的位置(先水平，再上下) */
+            background-position: center center;
+            /* 位置也可以是具体的值（以左上角为原点） */
+            background-position: -200px -10px;
+            /* 复合属性 */
+            background: url(../images/bg.jpg) repeat-x 300px;
+            cursor: url(../images/arrow.png),pointer;
+        }
+        .dz {
+            width: 400px;
+            height: 400px;
+            background-color: skyblue;
+            cursor: wait;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>列表相关属性</h2>
+    <ul>
+        <li>自定义列表的符号，符号位置等</li>
+        <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut, saepe officia sint deserunt explicabo perferendis quibusdam in accusamus aspernatur. Sunt dolores dicta rerum? Cupiditate voluptatum cumque alias voluptate! Repellat, quas!</li>
+        <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut, saepe officia sint deserunt explicabo perferendis quibusdam in accusamus aspernatur. Sunt dolores dicta rerum? Cupiditate voluptatum cumque alias voluptate! Repellat, quas!</li>
+        <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut, saepe officia sint deserunt explicabo perferendis quibusdam in accusamus aspernatur. Sunt dolores dicta rerum? Cupiditate voluptatum cumque alias voluptate! Repellat, quas!</li>
+        <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut, saepe officia sint deserunt explicabo perferendis quibusdam in accusamus aspernatur. Sunt dolores dicta rerum? Cupiditate voluptatum cumque alias voluptate! Repellat, quas!</li>
+    </ul>
+    <h2>表格相关属性</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>序号</th>
+                <th>姓名</th>
+                <th>年龄</th>
+                <th>性别</th>
+                <th>政治面貌</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>张三</td>
+                <td>18</td>
+                <td>男</td>
+                <td>共青团员</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>李四</td>
+                <td>28</td>
+                <td>男</td>
+                <td>中共党员</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>王五</td>
+                <td>20</td>
+                <td>男</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>赵六</td>
+                <td>21</td>
+                <td>女</td>
+                <td>共青团员</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <hr>
+    <h2>背景相关属性</h2>
+    <div class="kk">你好啊！！！</div>
+    <hr>
+    <h2>鼠标相关属性</h2>
+    <div class="dz">把鼠标放进来看看
+        <input type="text">
+        <a href="https://www.baidu.com">百度</a>
+    </div>
+</body>
+
+</html>

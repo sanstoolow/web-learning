@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .dz1h {
+            font-size: 60px;
+        }
+        .dz2h {
+            font-size: 50px;
+        }
+        .dz3h {
+            font-size: 40px;
+        }
+        .dz4h {
+            font-size: 30px;
+        }
+        .dz1hd {
+            font-size: 60px;
+            font-family: "宋体";
+        }
+        .dz2hd {
+            font-size: 50px;
+            font-family: "楷体",serif;
+        }
+        .dz3hd {
+            font-size: 40px;
+            font-family: "Microsoft YaHei";
+        }
+        .dz4hd {
+            font-size: 30px;
+            font-family: "HarmonyOS_Sans",sans-serif;
+        }
+        .dz1hdz {
+            font-size: 60px;
+            font-style: normal;
+        }
+        .dz2hdz {
+            font-size: 50px;
+            font-style:italic ;
+        }
+        .dz3hdz {
+            font-size: 40px;
+            font-style: oblique;
+        }
+        .dz4hdz {
+            font-size: 30px;
+            font-style:unset;
+        }
+        .dz1hdz {
+            font-size: 60px;
+            font-style: normal;
+            font-weight: bold;
+        }
+        .dz2hdz {
+            font-size: 50px;
+            font-style:italic ;
+            font-weight: 300;
+        }
+        .dz3hdz {
+            font-size: 40px;
+            font-style: oblique;
+            font-weight: 500;
+        }
+        .dz4hdz {
+            font-size: 30px;
+            font-style:inherit;
+            font-weight: lighter;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>字体</h1>
+    <h2>字体大小</h2>
+    <div class="dz1h">顶真1号</div>
+    <div class="dz2h">顶真2号</div>
+    <div class="dz3h">顶真3号</div>
+    <div class="dz4h">顶真4号</div>
+    <p>浏览器默认使用的16px</p>
+    <p>浏览器能接受的最小字体也许可调，大概是12px</p>
+    <p>一般使用明确指出字体大小到底是多少的，通常给body的fs值这样所有的字体都可以继承了</p>
+    <h2>字体族</h2>
+    <div class="dz1hd">顶真1号</div>
+    <div class="dz2hd">顶真2号</div>
+    <div class="dz3hd">顶真3号</div>
+    <div class="dz4hd">顶真4号</div>
+    <h2>字体风格</h2>
+    <div class="dz1hdz">顶真1号</div>
+    <div class="dz2hdz">顶真2号</div>
+    <div class="dz3hdz">顶真3号</div>
+    <div class="dz4hdz">顶真4号</div>
+    <h2>字体粗细</h2>
+    <p>字体粗细主要看字体种类里面是否有粗细，无法自行无极调整</p>
+    <div class="dz1hdzy">顶真1号</div>
+    <div class="dz2hdzy">顶真2号</div>
+    <div class="dz3hdzy">顶真3号</div>
+    <div class="dz4hdzy">顶真4号</div>
+
+    <h3>字体复合写法</h3>
+    <div>
+        <p>
+            .dd {
+                font: bold italic 100px "HarmonyOS_Sans",sans-serif;
+            }
+        </p>
+        <p>字体族最后一位，字体大小必须倒数第二位</p>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .ppt {
+            /* display: block; */
+            /* div 默认肯定是块元素 */
+            display: inline-block;
+            height: 300px;
+            width: 300px;
+            background-color: skyblue;
+        }
+
+        .webing {
+            /* display: inline; */
+            display: block;
+            height: 200px;
+            width: 200px;
+            background-color: aqua;
+        }
+
+        .jd {
+            /* display: inline; */
+            display: none;
+            background-color: seashell;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>块元素</p>
+        <ul>
+            <li>结构标签：html body</li>
+            <li>排版标签：h1 - h6  hr p pre div </li>
+            <li>列表标签： ui ol li dl dt dd </li>
+            <li>表格相关标签： table tbody thead tfoot tr caption </li>
+            <li>form option</li>
+        </ul>
+        <p>行内元素</p>
+        <ul>
+            <li>文本标签：br em strong sup sub del ins</li>
+            <li>a label</li>
+        </ul>
+        <p>行内块元素</p>
+        <ul>
+            <li>图片：img</li>
+            <li>单元格 td th</li>
+            <li>表单控件： input textarea select button</li>
+            <li>框架标签： iframe</li>
+        </ul>
+    </div>
+
+
+    <div>
+        <p>如何修改元素的显示模式</p>
+        <div class="ppt"></div>
+        <a href="https://www.baidu.com">去百度</a>
+        <a href="https://www.baidu.com"  class="webing"></a>
+        <a href="https://www.jd.com" class="jd">京东？</a>
+    </div>
+</body>
+</html>

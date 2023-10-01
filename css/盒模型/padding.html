@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .d1 {
+            width: 400px;
+            height: 200px;
+            background-color: aqua;
+            font-size: 20px;
+
+            /* padding-left: 0;
+            padding-right: 0;
+            padding-top: 0;
+            padding-bottom: 0; */
+
+            /* padding符合写法  上下左右*/
+            /* padding: 20px 40px; */
+            /* 上 左右 下 */
+            /* padding: 10px 20px 30px; */
+        }
+
+        span {
+            padding-left: 20px;
+            padding-right: 20px;
+            /* 但是对于span这样的行内元素,优先保证内容区的大小，和div这样的不太一样 */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="d1">hello</div>
+    <span>hello</span>
+</body>
+
+</html>

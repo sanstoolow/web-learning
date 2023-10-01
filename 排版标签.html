@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文本排序</title>
+</head>
+
+<body>
+    <!--h标签里面默认加粗且h1最重要-->
+    <h1>1我是第几个标题</h1>
+    <h2>2</h2>
+    <h3>3</h3>
+    <h4>4</h4>
+    <h5>5</h5>
+    <h6>6</h6>
+    <!-- <h3>    </h3> -->
+
+    <!--h1只写一个-->
+    <!--h2次一级，h3再次一级-->
+    <p>duanluo我是某一个段落</p>
+    <p>duanluo</p>
+    <p>duanluo</p>
+    <div>kunkunkun,div是类似于一个购物袋</div>
+    <div>
+        <p>duna1</p>
+        <p>duan2</p>
+        <h1>pp</h1>
+        <h2>ppp</h2>
+    </div>
+    <!-- 原则：p标签里面不允许出现h，div也是不可以的，自己也不行 -->
+    <p>测试
+    <h1>什么玩意</h1>
+    </p>
+    <!-- 上面这个是典型错误，会转化为以下代码-->
+    <p>测试</p>
+    <h1>什么玩意</h1>
+    <p></p>
+</body>
+
+</html>

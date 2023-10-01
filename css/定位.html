@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .outer {
+            width: 500px;
+            background-color: skyblue;
+            border: 1px black solid;
+            padding:20px;
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            margin: 5px;
+        }
+
+        .box1 {
+            background-color: #888;
+        }
+
+        .box2 {
+            background-color: orange;
+            position: relative;
+            /* left: 100px; */
+            /* 所以这是相对于什么*/
+            /* 左右，上下两个不可以同时出现 */
+            top: 50px;
+        }
+
+        .box3 {
+            background-color: forestgreen;
+            position: relative;
+            top: -50px;
+        }
+    </style>
+</head>
+
+<body>
+    <p>相对定位</p>
+    <div class="outer">
+        <div class="box box1">1</div>
+        <div class="box box2">2</div>
+        <div class="box box3">3</div>
+    </div>
+    <p>只要开了定位，元素层级就是比其他元素高</p>
+</body>
+
+</html>

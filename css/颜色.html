@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            color: chocolate;
+        }
+
+        .sss {
+            color: rgb(138, 43,226);
+        }
+
+        .ssss {
+            color: rgba(138, 43, 226, 10%);
+        }
+
+        .d {
+            color: #ff00ff;
+        }
+        .dd {
+            color: #c7eec7;
+        }
+
+        p {
+            color: #fcd;
+        }
+
+        div {
+            color: #888f;
+        }
+        
+        div:empty {
+            background-color: hsl(0deg, 100%, 50%);
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <span>dingzhen</span>
+    </div>
+    <div>
+        <p>颜色并不是简单的写一个red</p>
+        <p>如何实现精细控制颜色？</p>
+    </div>
+    <div>
+        <p>rgb或者rgba</p>
+        <span class="sss">yydz</span>
+        <span class="ssss">myqm</span>
+    </div>
+    <div>
+        <p>HEX HEXA</p>
+        <p>color: #?????? 每两位都是16进制</p>
+        <p>color: #???????? 每两位都是16进制最后两位就是那个透明度</p>
+        <p>color: #fcd color:#888d 两两重复的可以简写，透明度从0~f</p>
+        <span class="d">
+            dingding
+        </span>
+        <span class="dd">
+            dingzhen
+        </span>
+    </div>
+    <div>
+        <p>HSL HSLA</p>
+        <p>color: hsl(色相,饱和度,亮度)</p>
+        <p>color: hsla(色相,饱和度,亮度,0.68)</p>
+        <p>色相用角度表示，色相图 deg可写可不写</p>
+        <p>饱和度从0~100% 0黑白 100全色</p>
+        <p>亮度也是0~100% 一般用50% 100白色</p>
+        <div></div>
+    </div>
+</body>
+</html>

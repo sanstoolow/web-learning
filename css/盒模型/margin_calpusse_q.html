@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .outer {
+            width: 400px;
+            height: 400px;
+            background-color: gray;
+            /* 加外边框可以解决问题 */
+            /* border: 1px solid transparent; */
+            /* 加padding解决 */
+            /* padding: 1px; */
+            overflow: hidden;
+            /* 溢出的解决问题 */
+        }
+        .inner1 {
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+            margin-top: 50px;
+            /* 第一个元素的top会被父元素抢走 */
+        }
+        .inner2 {
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            margin-bottom: 50px;
+            /* 最后一个元素的bottom会被父元素抢走 */
+        }
+        .box {
+            width: 200px;
+            height: 200px;
+        }
+        .box1 {
+            background-color: deepskyblue;
+            margin-bottom: 50px;
+        }
+        .box2 {
+            background-color: orange;
+            margin-top: 150px;
+            /* 会发现box上下的合并，仅存在与上下兄弟元素，行内是不存在这个问题的 */
+            /* 没有特别好的解决方案，不如来点公用的距离，规避问题 */
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="ineer1"></div>
+        <div class="ineer2"></div>
+    </div>
+
+
+    <div class="box box1">1</div>
+    <div class="box box2">2</div>
+</body>
+</html>

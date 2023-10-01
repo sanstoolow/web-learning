@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-size: 16px;
+        }
+
+        .container {
+            letter-spacing: 20px;
+        }
+
+        .wole {
+            word-spacing: 20px;
+        }
+
+        .woling {
+            letter-spacing: -5px;
+        }
+
+        .lineo {
+            text-decoration: line-through double;
+        }
+
+        .linet {
+            text-decoration: overline wavy skyblue;
+        }
+
+        .lineth {
+            text-decoration: underline dotted magenta;
+        }
+
+        div {
+            text-indent: 32px;
+        }
+
+        .d1 {
+            text-align: center;
+        }
+
+        .d2 {
+            text-align: left;
+        }
+
+        .d3 {
+            text-align: right;
+        }
+
+        .lining {
+            line-height: 40px;
+            font-size: 40px;
+            background-color: skyblue;
+        }
+
+        .line {
+            /* line-height：可以写百分比，小数，是定义的字体大小的倍数，或者自己写px */
+            line-height: 1.5;
+            /* 小数用的多 */
+            font-size: 40px;
+            background-color: skyblue;
+        }
+
+        #container {
+            font-size: 20px;
+            background-color: skyblue;
+            letter-spacing: normal;
+            line-height: 1.667;
+        }
+
+        #intendify {
+            vertical-align: middle;
+            background-color: orange;
+        }
+
+        #density {
+            vertical-align: top;
+            background-color: orange;
+        }
+        img {
+            height: 40px;
+            vertical-align: bottom;
+        }
+        .box {
+            vertical-align: bottom;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>文本</h1>
+    <hr>
+    <h2>文本颜色见 <a href="./颜色.html">颜色.html</a></h2>
+    <hr>
+    <h2>文本间隔</h2>
+    <p>正常效果</p>
+    <div>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab quam nobis aut dolore explicabo omnis, assumenda,
+        eveniet quae porro nulla labore aliquam sint molestias. Laborum assumenda deserunt cum magnam impedit.
+    </div>
+    <p>字母间距（汉字相同）</p>
+    <div class="container">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio vero quidem, perspiciatis architecto atque ad,
+        earum consequatur consequuntur inventore distinctio nihil vel quibusdam accusantium dolorem debitis modi
+        aspernatur illo quae.
+    </div>
+    <div class="woling">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam cum sit perspiciatis illum dolore repellat,
+        quis consequuntur hic minima labore fugit voluptatibus libero, et velit alias culpa incidunt magnam odio?
+    </div>
+    <p>单词间距（对于汉字没有用）</p>
+    <div class="wole">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi natus accusantium, in minus ea temporibus ad
+        error perspiciatis officiis consequatur sit repellat dicta, architecto facere qui. Magni temporibus animi
+        placeat!
+    </div>
+    <hr>
+    <h2>文本修饰</h2>
+    <div class="lineo">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis perferendis neque voluptatem accusantium
+        architecto dignissimos, odio autem nemo repellat molestias eos ratione aperiam ducimus nesciunt recusandae fugit
+        mollitia modi. Vero.
+    </div>
+    <div class="linet">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis perferendis neque voluptatem accusantium
+        architecto dignissimos, odio autem nemo repellat molestias eos ratione aperiam ducimus nesciunt recusandae fugit
+        mollitia modi. Vero.
+    </div>
+    <div class="lineth">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis perferendis neque voluptatem accusantium
+        architecto dignissimos, odio autem nemo repellat molestias eos ratione aperiam ducimus nesciunt recusandae fugit
+        mollitia modi. Vero.
+    </div>
+    <hr>
+    <h2>文本缩进</h2>
+    <p>text-indent: 32px;</p>
+    <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis odio ratione alias non neque architecto
+        consectetur laudantium aliquam deleniti eaque laborum, reprehenderit, tempore libero rem, nemo placeat error
+        assumenda cupiditate!</div>
+    <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis odio ratione alias non neque architecto
+        consectetur laudantium aliquam deleniti eaque laborum, reprehenderit, tempore libero rem, nemo placeat error
+        assumenda cupiditate!</div>
+    <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis odio ratione alias non neque architecto
+        consectetur laudantium aliquam deleniti eaque laborum, reprehenderit, tempore libero rem, nemo placeat error
+        assumenda cupiditate!</div>
+    <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis odio ratione alias non neque architecto
+        consectetur laudantium aliquam deleniti eaque laborum, reprehenderit, tempore libero rem, nemo placeat error
+        assumenda cupiditate!</div>
+
+    <hr>
+    <h2>文本对齐</h2>
+    <div class="d1">dddd居中</div>
+    <div class="d2">dddd左</div>
+    <div class="d3">dddd右</div>
+    <hr>
+    <h2>行高</h2>
+    <div class="lining">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates suscipit, necessitatibus
+        aperiam cupiditate tempora saepe repellat inventore soluta odio corrupti quo, dolorem, explicabo totam voluptate
+        placeat molestias voluptatum excepturi modi?Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates
+        suscipit, necessitatibus
+        aperiam cupiditate tempora saepe repellat inventore soluta odio corrupti quo, dolorem, explicabo totam voluptate
+        placeat molestias voluptatum excepturi modi?</div>
+    <div class="line">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates suscipit, necessitatibus
+        aperiam cupiditate tempora saepe repellat inventore soluta odio corrupti quo, dolorem, explicabo totam voluptate
+        placeat molestias voluptatum excepturi modi?Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates
+        suscipit, necessitatibus
+        aperiam cupiditate tempora saepe repellat inventore soluta odio corrupti quo, dolorem, explicabo totam voluptate
+        placeat molestias voluptatum excepturi modi?</div>
+    <p>仔细观察是否能够调好line-height与font-size的值大小</p>
+    <p>自己手动不写，浏览器会给你一个合适的值（normal）</p>
+
+    <div id="container">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae quasi facere assumenda
+        voluptatibus officia nisi dolores quidem explicabo quibusdam ad. Ipsa eos molestiae veniam totam debitis
+        distinctio laudantium quaerat at.</div>
+    <p>行高过小会让文字重叠，且最小值为0</p>
+    <p>行高可继承，推荐小数写法也是避免继承固定值的行高</p>
+    <p>height和line-height关系：不设置height的情况下，根据line-height确定height（*行数）</p>
+    <ul>
+        <li>单行文字的垂直居中</li>
+        <li>调整多行文字的间距</li>
+    </ul>
+
+    <hr>
+    <h2>垂直对齐</h2>
+    <div>Lorem ipsum dolor <span id="density">sit</span> <span id="intendify">llllll</span>amet consectetur adipisicing.
+    </div>
+    <p>vertical-align是控制父元素里面的子元素的对齐方式！</p>
+    <p>vertical-align是不可以控制块级元素的</p>
+    <p>text-top
+        使元素的顶部与父元素的字体顶部对齐。
+
+        text-bottom
+        使元素的底部与父元素的字体底部对齐。
+
+        middle
+        使元素的中部与父元素的基线加上父元素 x-height（译注：x 高度）的一半对齐。</p>
+    <div>Lorem ipsum dolor sit amet. <img src="../images/g11.jpg" alt=""></div>
+    <p>也可以用在表格当中的单元格上面</p>
+    <table border="1" cellspacing="0" width=100% height="400px">
+        <caption>人员信息</caption>
+        <thead>
+            <tr>
+                <th>姓名</th>
+                <th>年龄</th>
+                <th>性别</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="box">张三</td>
+                <td valign="top">18</td>
+                <td>男</td>
+            </tr>
+            <tr>
+                <td>李四</td>
+                <td>20</td>
+                <td>男</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>

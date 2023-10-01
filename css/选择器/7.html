@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #qmrs #qmr {
+            color: mediumaquamarine;
+        }
+
+        #qmr {
+            color: blueviolet;
+        }
+        .container span.slogan {
+            color: red;
+        }
+
+        div>p>span:nth-child(1) {
+            color: greenyellow;
+        }
+
+        div>p>span:first-child {
+            color: red;
+        }
+        .container {
+            color: blueviolet !important;
+        }
+    </style>
+</head>
+<body>
+    <p>写了2种样式，如何看权重呢？</p>
+    <p>格式(a,b,c)</p>
+    <p>a:id选择器的个数</p>
+    <p>b:类，伪类，属性选择器的个数</p>
+    <p>c:元素，伪元素选择器的个数</p>
+    <p>abc互相依次比较，谁一旦大一些就听谁的</p>
+    <p>权重一样的按先后顺序来(!important最重要！)</p>
+    <div class="container" id="qmrs">
+        <span class="slogan" id="qmr">好干了兄弟们</span>
+        <br>
+        <span>欢迎欢迎，又好又好</span>
+    </div>
+</body>
+</html>

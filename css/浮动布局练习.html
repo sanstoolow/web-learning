@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .outer {
+            width: 960px;
+            text-align: center;
+            line-height: 80px;
+        }
+
+        .body {
+            margin: 0;
+        }
+
+        .logo {
+            width: 200px;
+            height: 80px;
+            background-color: lightgray;
+            margin-right: 10px;
+            float: left;
+        }
+
+        .banner1 {
+            width: 540px;
+            height: 80px;
+            background-color: lightgray;
+            margin-right: 10px;
+            float: left;
+        }
+
+        .banner2 {
+            width: 200px;
+            height: 80px;
+            background-color: lightgray;
+            float: right;
+        }
+
+        .outer::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        .menu {
+            width: 960px;
+            height: 30px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            background-color: lightgray;
+            text-align: center;
+            line-height: 30px;
+        }
+
+        .boxr {
+            width: 200px;
+            height: 130px;
+            border: 1px black solid;
+            /* margin: 10px; */
+            text-align: center;
+            line-height: 130px;
+            margin-bottom: 10px;
+        }
+
+        .lu {
+            width: 370px;
+            height: 200px;
+            border: 1px black solid;
+            float: left;
+            text-align: center;
+            line-height: 200px;
+        }
+
+        .lul {
+            margin-right: 5px;
+        }
+
+        .lur {
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+
+        .ed {
+
+            clear: both;
+        }
+
+        .ld {
+            width: 180px;
+            height: 200px;
+            border: 1px black solid;
+            text-align: center;
+            line-height: 200px;
+            float: left;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .d1 {
+            margin-left: 10px;
+            margin-right: 5px;
+        }
+
+        .d2 {
+            margin-left: 5px;
+            margin-right: 10px;
+        }
+
+        .right,
+        .left {
+            float: left;
+        }
+
+        .brootfoot {
+            height: 60px;
+            width: 960px;
+            background-color: lightgray;
+            text-align: center;
+            line-height: 60px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outer">
+        <div class="logo">logo</div>
+        <div class="banner1">banner1</div>
+        <div class="banner2">banner2</div>
+    </div>
+    <div>
+        <div class="menu"><span>菜单</span></div>
+    </div>
+    <div class="compl">
+        <div class="left">
+            <div class="lu lul">项目一</div>
+            <div class="lu lur">项目二</div>
+            <div class="ed"></div>
+            <div class="ld">项目三</div>
+            <div class="ld d1">项目四</div>
+            <div class="ld d2">项目五</div>
+            <div class="ld">项目六</div>
+            <div class="ed"></div>
+
+        </div>
+        <div class="right">
+            <div class="boxr">项目七</div>
+            <div class="boxr">项目八</div>
+            <div class="boxr">项目九</div>
+        </div>
+        <div class="ed"></div>
+    </div>
+    <div class="brootfoot"><span>页脚</span></div>
+</body>
+
+</html>

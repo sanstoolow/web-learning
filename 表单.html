@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        label:focus {
+            color: midnightblue;
+        }
+    </style>
+</head>
+
+<body>
+    <p>表单就是用户手机的数据，如登陆界面</p>
+    <form action="https://www.baidu.com/s" target="_blank" method="get">
+        <input type="text" name="wd">
+        <button>搜索</button>
+    </form>
+
+    <p>百度工程师规定 action必须是https://www.baidu.com/s</p>
+    <p>name必须是wd</p>
+
+    <hr>
+    <form action="https://search.jd.com/search" target="_self" method="get">
+        <input type="text" name="keyword">
+        <button>京东搜索</button>
+    </form>
+    <p>京东工程师定义和百度不同action="https://search.jd.com/search"</p>
+    <p>此外就是name定义为keyword</p>
+
+    <p>访问是一门艺术</p>
+    <a href="https://www.baidu.com/s?wd=你就是个几把">百度搜索</a>
+    <hr>
+    <a href="https://search.jd.com/search?keyword=K50">京东搜索</a>
+
+    <form action="https://search.jd.com/search" target="_blank" method="">
+        <!-- 输入内容 -->
+        账户：<input type="text" name="account" value="zhangsan" maxlength="99"><!--value为默认值-->
+        <br>
+        密码：<input type="password" name="pwd" value="" maxlength="20">
+        <br>
+        <!--多选按钮，单选按钮-->
+        性别：
+        <input type="radio" name="gender" value="male">男<br>
+        <input type="radio" name="gender" value="female" checked>女<br>
+        爱好：
+        <input type="checkbox" name="hobby" value="smoke" checked>抽烟
+        <input type="checkbox" name="hobby" value="drink">喝酒
+        <input type="checkbox" name="hobby" value="prim" checked>烫头
+        <!-- 隐藏域 -->
+        <br>
+        <input type="hidden" name="tag" value="123">
+        <p>隐藏域是为了防止脚本批量访问</p>
+        <input type="hidden" name="from" id="jd">
+
+        <!-- 文本域 -->
+        <br>
+        <textarea name="other " id="wd" cols="30" rows="10"></textarea>
+
+        <!-- 选择列表 -->
+        <br>
+        <select name="place">
+            <option value="lt">理塘</option>
+            <option value="dz" selected>丁真</option>
+            <option value="chicken">坤坤</option>
+        </select>
+
+        <!-- 确认按钮 -->
+        <input type="submit" value="确认保存"><br>
+        <input type="submit"><br>
+        <button>确认</button><br>
+        <!-- 重置按钮 -->
+        <button type="reset">重置</button><br>
+        <input type="reset" value="确认重置"><br>
+        <!-- 检测 -->
+        <button type="button">检测账户是否被注册</button>
+        <input type="button" value="检测是否被注册过">
+    </form>
+
+    <!-- input textarea option button select都可以使用 disabled属性来进行禁用 -->
+    <input disabled type="checkbox" name="hobby" value="smoke" checked>抽烟
+    <input disabled type="checkbox" name="hobby" value="drink">喝酒
+    <input disabled type="checkbox" name="hobby" value="prim" checked>烫头
+
+    <select name="method" id="kun">
+        <option value="0551" disabled>合肥市</option>
+        <option value="0551">芜湖市</option>
+    </select>
+    <br>
+    <textarea disabled name="discription" cols="28" rows="20" value="dddddd"></textarea>
+
+
+    <!-- label焦点问题！！ -->
+    <br>
+    <label for="account">你的家乡是:</label>
+    <input type="text" id="account" name="account" value="hf">
+    <br>
+    <label>你的家乡是:<input type="text" id="accounts" name="accounts" value="hfs"></label>
+    <p>比较</p>
+    你的家乡是:<input type="text" name="home" id="">
+    <p>仔细观察为什么label两种写法有一种会多一个空格</p>
+    <p>看看label是通过id来实现联动获取焦点</p>
+
+
+
+    <!-- fieldset和legend -->
+    <form action="https://www.baidu.com/s">
+        <fieldset>
+            <legend>主要信息</legend>
+            <!-- 输入内容 -->
+            账户：<input type="text" name="account" value="zhangsan" maxlength="99"><!--value为默认值-->
+            <br>
+            密码：<input type="password" name="pwd" value="" maxlength="20">
+            <br>
+            <!--多选按钮，单选按钮-->
+            性别：
+            <input type="radio" name="gender" value="male">男<br>
+            <input type="radio" name="gender" value="female" checked>女<br>
+            爱好：
+            <input type="checkbox" name="hobby" value="smoke" checked>抽烟
+            <input type="checkbox" name="hobby" value="drink">喝酒
+            <input type="checkbox" name="hobby" value="prim" checked>烫头
+        </fieldset>
+        <fieldset>
+            <legend>次要信息</legend>
+            爱好：
+            <input type="checkbox" name="hobby" value="smoke" checked>抽烟
+            <input type="checkbox" name="hobby" value="drink">喝酒
+            <input type="checkbox" name="hobby" value="prim" checked>烫头
+
+            <!-- 文本域 -->
+            <br>
+            <textarea name="other " id="wd" cols="30" rows="10"></textarea>
+
+            <!-- 选择列表 -->
+            <br>
+            <select name="place">
+                <option value="lt">理塘</option>
+                <option value="dz" selected>丁真</option>
+                <option value="chicken">坤坤</option>
+            </select>
+        </fieldset>
+        <!-- 确认按钮 -->
+        <input type="submit" value="确认保存"><br>
+        <button>确认</button><br>
+        <!-- 重置按钮 -->
+        <button type="reset">重置</button><br>
+        <!-- 检测 -->
+        <button type="button">检测账户是否被注册</button>
+
+    </form>
+</body>
+
+
+
+
+</html>

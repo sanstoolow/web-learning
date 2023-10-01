@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-size: 16px;
+            margin: 0;
+        }
+
+        img {
+            height: 100%;
+            display: block;
+        }
+
+        div {
+            /* 内容区的宽高 */
+            width: 400px;
+            height: 400px;
+            /* 内边距：设置的背景颜色会填充内边距区域 */
+            padding: 20px;
+            /* 其实可以理解为在内容区外面套了一层padding的皮 */
+            /* 边框：在padding外面套的皮 */
+            border: 10px dashed black;
+
+            font-size: 20px;
+            background-color: gray;
+        }
+
+        p {
+            /* 最大最小值动态变化，没什么用处 */
+            /* 如果明白需要到底多少，就不需要这样的范围 */
+            min-width: 200px;
+            max-width: 800px;
+            /* width: 500px; */
+            min-height: 200px;
+            max-height: 800px;
+            /*在没有高的限制的时候，是没有上限的，随着浏览器渲染的过程不断增高*/
+            /* height: 500px; */
+
+        }
+    </style>
+</head>
+
+<body>
+    <img src="../../images/样例.png" alt="例子">
+    <div>
+
+    </div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, quis?</p>
+</body>
+
+</html>

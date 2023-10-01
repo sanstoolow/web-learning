@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        caption {
+            color: blue;
+            font-size: 40px;
+            font-weight: 900;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>列表介绍</h1>
+    <h2>有序列表，无序列表，自定义列表</h2>
+    <div>
+        <p>有序列表 ordered list ol </p>
+        <p>无序列表 unordered list ul </p>
+        <p>自定义列表 defined list dl </p>
+    </div>
+    <h3>要把大象放冰箱有几布（有顺序）</h3>
+    <ol>
+        <li>把冰箱门打开</li>
+        <li>把大象放进去</li>
+        <li>把冰箱门关上</li>
+    </ol>
+    <h3>我想去的地方(理论无序)</h3>
+    <ul>
+        <li>理塘！！</li>
+        <li>litang peaktime!!</li>
+        <li>
+            <ol>
+                <li>kunkun</li>
+                <li>kunkun喊你去别的地方吃饭了</li>
+            </ol>
+        </li>
+        <li>
+            <span>litang</span>
+            <ol>
+                <li>kunkun</li>
+                <li>kunkun喊你去别的地方吃饭了</li>
+                <li>
+                    <span>看你没只因</span>
+                    <ul>
+                        <li>ddd</li>
+                        <li>dd</li>
+                        <li>d</li>
+                    </ul>
+                </li>
+            </ol>
+        </li>
+    </ul>
+
+
+
+    <h3>如何更好的学习</h3>
+    <dl>
+        <dt>做好笔记</dt>
+        <dd>
+            做什么笔记简直笑死人！！
+        </dd>
+        <dt>多加练习</dt>
+        <dd>
+            酒吧舞能写出来雪distance??
+        </dd>
+    </dl>
+
+    <!-- 表格 -->
+    <table border="1" width="1000" height="800" cellspacing="0"><!--cellspacing描述间距，但是不是合并边框-->
+        <!-- 表格标题 -->
+        <caption>这是一个标题</caption>
+        <!-- 表格头部 -->
+        <thead height=200px align="left" valign="top"><!--left center right--><!--top middle bottom-->
+            <tr><!--行-->
+                <th height="20px" width="20px" align="left" >姓名</th><!--单元格内容-->
+                <th align="right">性别</th>
+                <th>年龄</th>
+                <th>民族</th>
+                <th>政治面貌</th>
+            </tr>
+        </thead>
+        <!-- 表格主体 -->
+        <tbody height=500px align="right" valign="bottom">
+            <tr><!--行-->
+                <td height="200px">张三</td><!--单元格内容-->
+                <td align="right">男</td>
+                <td>18</td>
+                <td>汉族</td>
+                <td>团员</td>
+            </tr>
+            <tr height=100px align="left" valign="bottom"><!--行-->
+                <td>李四</td>
+                <td>女</td>
+                <td>20</td>
+                <td>满族</td>
+                <td>群众</td>
+            </tr>
+            <tr><!--行-->
+                <td>王五</td>
+                <td>男</td>
+                <td>19</td>
+                <td>回族</td>
+                <td>党员</td>
+            </tr>
+            <tr><!--行-->
+                <td>赵六</td>
+                <td>女</td>
+                <td>21</td>
+                <td>壮族</td>
+                <td>团员</td>
+            </tr>
+        </tbody>
+        <!-- 表格脚注 -->
+        <tfoot height="100px" align="right" valign="top">
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>共计：4人</td>
+            </tr>
+        </tfoot>
+    </table>
+
+
+
+    <!--表格的升级版，有包含关系的行和列-->
+    <table border="1" cellspacing="0" height="700px" width="600px">
+        <caption>课程表</caption>
+        <thead>
+            <tr>
+                <th>项目</th>
+                <th colspan="5">上课</th>
+                <!-- <th>1-3</th>
+                <th>1-4</th>
+                <th>1-5</th>
+                <th>1-6</th> -->
+                <th colspan="2">活动与休息</th>
+                <!-- <th>1-8</th> -->
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>星期</td>
+                <td>星期一</td>
+                <td>星期二</td>
+                <td>星期三</td>
+                <td>星期四</td>
+                <td>星期五</td>
+                <td>星期六</td>
+                <td>星期日</td>
+                
+            </tr>
+            <tr>
+                <td rowspan="4">上午</td>
+                <td>语文</td>
+                <td>数学</td>
+                <td>英语</td>
+                <td>英语</td>
+                <td>物理</td>
+                <td>数学竞赛</td>
+                <td rowspan="4">休息</td>
+            </tr>
+            <tr>
+                <!-- <td>4-1</td> -->
+                <td>数学</td>
+                <td>语文</td>
+                <td>化学</td>
+                <td>物理</td>
+                <td>英语</td>
+                <td>篮球比赛</td>
+                <!-- <td>4-8</td> -->
+            </tr>
+            <tr>
+                <!-- <td>5-1</td> -->
+                <td>化学</td>
+                <td>语文</td>
+                <td>体育</td>
+                <td>历史</td>
+                <td>地理</td>
+                <td>每周一考</td>
+                <!-- <td>5-8</td> -->
+            </tr>
+            <tr>
+                <!-- <td>6-1</td> -->
+                <td>体育</td>
+                <td>化学</td>
+                <td>语文</td>
+                <td>数学</td>
+                <td>英语</td>
+                <td>社会实践</td>
+                <!-- <td>6-8</td> -->
+            </tr>
+            <tr>
+                <td rowspan="2">下午</td>
+                <td>语文</td>
+                <td>英语</td>
+                <td>数学</td>
+                <td>物理</td>
+                <td>数学</td>
+                <td>英语角</td>
+                <td rowspan="2">休息</td>
+            </tr>
+            <tr>
+                <!-- <td>8-1</td> -->
+                <td>化学</td>
+                <td>物理</td>
+                <td>地理</td>
+                <td>生物</td>
+                <td>体育</td>
+                <td>自由活动</td>
+                <!-- <td>8-8</td> -->
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>

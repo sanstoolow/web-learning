@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <marquee behavior="" direction=""></marquee>
+    <marquee behavior="" direction=""></marquee>
+    <h1></h1>
+    <h1></h1>
+    <p></p>
+    <p></p>
+    <div></div>
+    <div></div>
+    <!-- 以上为块级元素，独占一行 -->
+    <input type="text">
+    <input type="text">
+    <span>kunkun</span>
+    <span>kun</span>
+    <!-- 以上为行内元素，不会挤占空间 -->
+
+    <!-- 规则1：块级元素里面几乎什么都能写 -->
+    <div>
+        <span>kunkunkun</span>
+        <input type="text" name="" id="">
+        <span>kunkunkun</span>
+    </div>
+    <!-- 规则2：行内元素能写行内元素，不能写块级元素 -->
+    <span>
+        kunkunkun
+        <input type="text">
+        <span>kun2</span>
+        <!-- <div>kunkun!</div> -->
+    </span>
+    <!-- h1-h6不能嵌套 -->
+    <!-- p标签不能用块元素！！ -->
+</body>
+
+</html>

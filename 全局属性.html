@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <!-- 配置字符编码 -->
+    <meta charset="UTF-8">
+    <!-- 兼容性配置     IE的设置 -->
+    <meta http-equiv="X-UA-Compatible"  content="IE=edge">
+    <!-- 移动端设备设置 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 配置网页关键字即content内容 -->
+    <meta name="keywords" content="qumorous's_web,网络学习结果教程，暑假摆烂">
+    <!-- 配置网页描述信息 -->
+    <meta name="description" content="这是qmr在暑假网页学习过程中的笔记">
+    <!-- 爬虫配置 -->
+    <meta name="robots" content="index">
+    <!-- 网页作者 -->
+    <meta name="author" content="tony">
+    <!-- 网页自动刷新 -->
+    <meta http-equiv="refresh" content="10;url=https://www.baidu.com">
+    <!-- 以京东的meta为例子
+    <meta charset="utf8" version="1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="京东JD.COM-专业的综合网上购物商城，为您提供正品低价的购物选择、优质便捷的服务体验。
+    商品来自全球数十万品牌商家，囊括家电、手机、电脑、服装、居家、母婴、美妆、个护、食品、生鲜等丰富品类，满足各种购物需求。"> 
+    <meta name="Keywords" content="网上购物,网上商城,家电,手机,电脑,服装,居家,母婴,美妆,个护,食品,生鲜,京东">
+    <meta name="renderer" content="webkit">
+    -->
+    <title>Document</title>
+    <style>
+        .student{
+            color: brown;
+        }
+        .dog{
+            color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <table border="1" width="900px" height="1000px">
+        <thead>
+            <tr>
+                <th>属性名</th>
+                <th>含义</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>id</td>
+                <td>给标签指定唯一标识，注意: id 是不能重复的<br>
+                    作用: 可以让 labe1 标签与表单控件相关联;也可以与 CSS、JavaScript 配合使用<br>
+                    注意:不能在以下 HTML 元素中使用:<br>
+                    &lt;head&gt;、&lt;html&gt;、&lt;style&gt;、&lt;title&gt;、&lt;meta&gt;、&lt;script&gt;、&lt;title&gt;</td>
+            </tr>
+            <tr>
+                <td>class</td>
+                <td>给标签指定类名，随后通过 CSS 就可以给标签设置样式。</td>
+            </tr>
+            <tr>
+                <td>style</td>
+                <td>给标签设置 CSS 样式。</td>
+            </tr>
+            <tr>
+                <td>dir</td>
+                <td>内容的方向，值: ltr、 rtl。<br>
+                    注意:不能在以下 HTML 元素中使用:<br>
+                    &lt;title&gt;、&lt;head&gt;、&lt;html&gt;、&lt;meta&gt;、&lt;script&gt;、&lt;style&gt;、&lt;title&gt;</td>
+            </tr>
+            <tr>
+                <td>title</td>
+                <td>给标签设置一个文字提示，一般超链接和图片用的比较多</td>
+            </tr>
+            <tr>
+                <td>lang</td>
+                <td>给标签指定语言，具体规范和可选值请参考[10.HTML设置语言] <br>
+                    注意:不能在以下 HTML 元素中使用:<br>
+                    &lt;title&gt;、&lt;head&gt;、&lt;html&gt;、&lt;meta&gt;、&lt;script&gt;、&lt;style&gt、&lt;title&gt;</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <div id="hello1">你好</div>
+    <div id="hello2">你好啊</div>
+    <p>id 可以当作超链接描点，也可以当作input</p>
+    <p class="student">这是 class作用下即css作用样式</p>
+    <p class="dog">dog</p>
+    <bdo dir="ltr">你就是个几把</bdo>
+    <bdo dir="rtl" title="这是bdo的演示">你也是数据结构的狗？</bdo>
+    <div dir="rtl" title="这是div的演示">kunkun喊你去别的地方吃饭了</div>
+    <div dir="ltr">kunkun喊你去别的地方吃饭了</div>
+    <div dir="auto">kunkun喊你去别的地方吃饭了</div>
+    <a href="www.baidu.com" title="去百度">baidu </a>
+</body>
+</html>

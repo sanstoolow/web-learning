@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .block1 {
+            font-size: 16px;
+        }
+        .d1,
+        .d4{
+            background-color: orange;
+        }
+        .d2,
+        .d5{
+            background-color:skyblue;
+        }.d3,
+        .d6{
+            background-color:mediumblue;
+        }
+        .block2 {
+            font-size: 0;
+            background-color: black;
+        }
+        .d4{
+            font-size: 20px;
+        }
+        .d5 {
+            font-size: 20px;
+        }
+        .d6 {
+            font-size: 20px;
+        }
+        #bg {
+            height: 200px;
+        }
+        #bgcon{
+            width: 600px;
+            background-color: skyblue;
+        }
+        #xiugai {
+            width: 600px;
+            background-color: skyblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="block1">
+        <span class="d1">ddd</span>
+        <span class="d2">ddd</span>
+        <span class="d3">ddd</span>
+    </div>
+    <div class="block2">
+        <span class="d4">ddd</span>
+        <span class="d5">ddd</span>
+        <span class="d6">ddd</span>
+        <hr>
+        <img src="../images/arrow.png" alt="1">
+        <img src="../images/arrow.png" alt="2">
+        <img src="../images/arrow.png" alt="3">
+    </div>
+    <p>如上如何消除行内元素之间的空白，父元素fs设置为0即可</p>
+    <div id="bgcon">
+        <img src="../images/bg.jpg" alt="bg" id="bg">xyz
+    </div>
+    <hr>
+    <div id="xiugai">
+        <!-- 这样就实现了把图片下面的缝给去掉了，但是必须要文字 -->
+        <img src="../images/bg.jpg" alt="xiugai" style="height: 200px;vertical-align: top;">xyz
+    </div>
+    <hr>
+    <div class="block1">
+        <!-- 这样就实现了把图片下面的缝给去掉了，但是必须没有东西跟着 -->
+        <img src="../images/bg.jpg" alt="xiugai" style="height: 200px;display: block;">
+    </div>
+    <hr>
+    <div class="block2">
+        <!-- 这样就实现了把图片下面的缝给去掉了，但是必须要再次设计文字大小，比较麻烦 -->
+        <img src="../images/bg.jpg" alt="xiugai" style="height: 200px;" >xyz
+    </div>
+</body>
+
+</html>
