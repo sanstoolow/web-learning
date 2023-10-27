@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .outer {
+            width: 1000px;
+            height: 100px;
+            border: 2px solid black;
+
+        }
+
+        .inner {
+            width: 100px;
+            height: 100px;
+            background-color: deepskyblue;
+            /* 应用动画 */
+            animation-duration: 5s;
+            /* 声明 */
+            animation-name: outer-going;
+            /* 因对刷新问题延迟 */
+            animation-delay: 0.8s;
+            /* 动画类型 */
+            /* animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1); */
+            animation-timing-function: ease-in-out;
+
+            /* 动画播放次数 */
+            /* animation-iteration-count: infinite;  */
+            animation-iteration-count: 3;
+
+            /* 动画方向 */
+            animation-direction: reverse;
+            /* 往复运动 */
+            animation-direction: alternate;
+            /* 动画以外的状态 */
+            /* forwards最后一帧停，backwards第一帧 */
+            animation-fill-mode: forwards;
+            /* 复合属性 */
+            /* name duration delay atfunciton aic direction fill-mode playstate */
+            animation: qumorous 3s 0.8s steps(200, start) infinite reverse alternate-reverse forwards;
+            /* 注意时间就好 */
+        }
+
+        .outer:hover .inner {
+            /* 动画播放状态 */
+            animation-play-state: paused;
+            /* running默认值 */
+        }
+
+        @keyframes inner-going {
+
+            /* 第一帧 */
+            from {
+                background-color: brown;
+                transform: translate(0px);
+            }
+
+            30% {
+                border: 2px solid yellow;
+                border-radius: 10px;
+            }
+
+            /* 最后一帧 */
+            to {
+                transform: translate(900px);
+                background-color: red;
+            }
+        }
+
+        @keyframes outer-going {
+
+            /* 第一帧 */
+            0% {
+                background-color: brown;
+                transform: translate(0px);
+            }
+
+            /* 29% {
+                background-color: deeppink;
+            }
+            59% {
+                background-color: orange;
+            } */
+            /* 最后一帧 */
+            100% {
+                transform: translate(900px) rotate(90deg);
+                background-color: red;
+                border-radius: 50%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outer">
+        <div class="inner"></div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .outer {
+            width: 200px;
+            height: 200px;
+            border: 2px solid black;
+            margin: 0 auto;
+            margin-top: 100px;
+            /* 3d open */
+            transform-style: preserve-3d;
+            /* deep_perspective透视效果 */
+            perspective: 500px;
+            /*500-1200px*/
+            /* outer 正中央是视角的观察点，可以另外设置的 */
+            /* perspective-origin: 10px 10px; */
+            /* perspective-origin: 102px 102px; */
+            perspective-origin: 50px 50px;
+            border-radius: 30px;
+
+        }
+
+        .inner {
+            width: 200px;
+            height: 200px;
+            background-color:rgba(0, 255, 179,0.8);
+            transform: rotateX('30deg');
+            transform: rotate('0deg');
+            transform: translateZ(100px);
+            transform: translate3d(100px,100px,20px);
+
+            /* 景深值位移，贴脸看不到，最大为499px */
+            box-shadow: 0px 0px 10px black;
+            transform: rotateZ('45deg');
+
+            /* 在是或者不是里面选择rotate */
+            transform: rotate3d(1,0,1,45deg);
+
+            /* 在可以看到的情况下，是放大的效果，在缩小景深的效果 */
+            transform: scaleZ(1.5);
+            transform: scale3d(1.5,1,1);
+
+            /* 多重变换 */
+            transform: translateZ(100px)    scaleZ(3)   rotateY(30deg);
+
+            /* 背部可见性 */
+            backface-visibility: hidden;
+            /* 越过90deg看不到镜像的背部 */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outer">
+        <div class="inner"></div>
+    </div>
+</body>
+
+</html>

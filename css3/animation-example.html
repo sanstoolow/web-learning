@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 130px;
+            height: 130px;
+            background-image: url(../bike.png);
+            animation: biking 2s steps(31) infinite;
+        }
+        @keyframes biking {
+            from{}
+            to {
+                background-position: 0px -4030px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bike"></div>
+</body>
+</html>

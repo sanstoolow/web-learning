@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            /* position: relative; */
+            margin: 0;
+            padding: 0;
+        }
+
+        .box1 {
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+            /* 过度，变化找变化元素即可 */
+            /* 设置过度属性 */
+            transition-property: all;
+            opacity: 1;
+            /* 常见可以过度：颜色，长度，百分比，z-index,opacity 2d-transform 3d-transform box-shandow */
+            /* 分别设置属性 */
+            /* transition-property: width,height,background-colors; */
+            /* 过渡时间 */
+            /* 分别设置时间 */
+            /* transition-duration: 2s,3s,4s; */
+            transition-duration: 5s;
+        }
+
+        .box1:hover {
+            width: 400px;
+            height: 400px;
+            background-color: red;
+            /* transform: rotate(30deg); */
+            box-shadow: 0px 0px 10px black;
+            opacity: 0.5;
+            /* position: absolute; */
+            /* left: 20px; */
+            /* top: 20px; */
+        }
+
+        .outer {
+            width: 1000px;
+            height: 900px;
+            border: 1px solid black;
+        }
+
+        .outer:hover .inner {
+            width: 1000px;
+        }
+
+        .inner {
+            width: 200px;
+            height: 100px;
+            background-color: orange;
+            transition-property: all;
+            transition-duration: 5s;
+            /* 过度延时 */
+            /* transition-delay: 1s; */
+        }
+
+        .box2 {
+            background-color: skyblue;
+            /* 平滑过渡，默认效果 */
+            transition-timing-function: ease;
+        }
+
+        .box3 {
+            background-color: orange;
+            /* 线性匀速 */
+            transition-timing-function: linear;
+        }
+
+        .box4 {
+            background-color: gray;
+            /* 先慢后快 */
+            transition-timing-function: ease-in;
+        }
+
+        .box5 {
+            background-color: tomato;
+            /* 先快后慢 */
+            transition-timing-function: ease-out;
+        }
+
+        .box6 {
+            background-color: deeppink;
+            /* 慢快慢 比ease更彻底一点 */
+            transition-timing-function: ease-in-out;
+        }
+
+        .box7 {
+            background-color: chocolate;
+            /* 不考虑过渡时间，直接终点 */
+            transition-timing-function: step-start;
+        }
+
+        .box8 {
+            background-color: yellow;
+            /* 不考虑过度，等过渡时间结束再进入 */
+            transition-timing-function: step-end;
+        }
+
+        .box9 {
+            background-color: saddlebrown;
+            /* 分块结束 */
+            transition-timing-function: steps(1000,start);
+            /* transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1); */
+        }
+
+        .box10 {
+            background-color: darkslategrey;
+            /* 贝塞尔曲线 */
+            transition-timing-function: cubic-bezier(.99,1.28,.78,.95);
+        }
+
+        .box11 {
+            background-color: darkmagenta;
+            /* duration property delay ttfunction  */
+            /* 时间顺序别错了就可以 */
+            transition: 3s all 0.1s linear;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1"></div>
+
+    <div class="outer">
+        <div class="inner box2"></div>
+        <div class="inner box3"></div>
+        <div class="inner box4"></div>
+        <div class="inner box5"></div>
+        <div class="inner box6"></div>
+        <div class="inner box7"></div>
+        <div class="inner box8"></div>
+        <div class="inner box9"></div>
+        <div class="inner box10"></div>
+        <div class="inner box11"></div>
+        <div class="inner box2"></div>
+        <div class="inner box2"></div>
+    </div>
+</body>
+
+</html>
