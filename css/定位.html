@@ -6,11 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        body {
+            height: 20000px;
+        }
         .outer {
             width: 500px;
             background-color: skyblue;
             border: 1px black solid;
-            padding:20px;
+            padding: 20px;
+            /* position: relative; */
         }
 
         .box {
@@ -37,6 +41,67 @@
             position: relative;
             top: -50px;
         }
+
+        .box4 {
+            background-color: #888;
+            transition: 1s all linear;
+        }
+
+        .box5 {
+            background-color: orange;
+            position: absolute;
+            /* 绝对定位不能用浮动 */
+            top: 0;
+            left: 0;
+        }
+
+        .box6 {
+            background-color: forestgreen;
+            position: absolute;
+            /* 绝对定位更像一个修改元素类型的东西，因为无论什么元素都可以修改宽高了 */
+            bottom: -100px;
+            right: -100px;
+        }
+
+        .outer:hover .box4 {
+            position: absolute;
+            left: 50px;
+        }
+
+        .box7 {
+            background-color: orange;
+        }
+
+        .box8 {
+            background-color: green;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+
+        .box9 {
+            background-color: #888;
+        }
+
+        .pageheader {
+            height: 100px;
+            background-color: orangered;
+            line-height: 100px;
+            text-align: center;
+            font-size: 20px;
+        }
+        .item {
+            background-color: #888;
+        }
+        .a,
+        .b,
+        .c {
+            background-color: skyblue;
+            font-size: 36px;
+            position: sticky;
+            top: 0;
+        }
+        
     </style>
 </head>
 
@@ -48,6 +113,59 @@
         <div class="box box3">3</div>
     </div>
     <p>只要开了定位，元素层级就是比其他元素高</p>
+    <p>个人理解是相对定位和漂浮是两种不同的跳整位置的方法，漂浮脱离文档流，定位不脱离文档流</p>
+    <p>绝对定位</p>
+    <div class="outer">
+        <div class="box box4"></div>
+        <div class="box box5"></div>
+        <div class="box box6"></div>
+    </div>
+    <p>包含块：找到开启了定位的父元素当作包含块，直到找到html，浮动无效</p>
+    <p>固定定位</p>
+    <div class="outer">
+        <div class="box box7"></div>
+        <div class="box box8"></div>
+        <div class="box box9"></div>
+    </div>
+    <p>固定定位寻找视口（浏览器内空间）的位置，类似于一直悬挂在旁边的小广告，浮动无效</p>
+    <p>粘性定位</p>
+    <div class="container">
+        <!-- 头部 -->
+        <div class="pageheader">头部</div>
+        <!-- 内容 -->
+        <div class="item">
+            <div class="a">A</div>
+            <h2>1</h2>
+            <h2>2</h2>
+            <h2>3</h2>
+            <h2>4</h2>
+            <h2>5</h2>
+            <h2>6</h2>
+            <h2>7</h2>
+            <h2>8</h2>
+            <h2>9</h2>
+            <div class="b">B</div>
+            <<h2>1</h2>
+            <h2>2</h2>
+            <h2>3</h2>
+            <h2>4</h2>
+            <h2>5</h2>
+            <h2>6</h2>
+            <h2>7</h2>
+            <h2>8</h2>
+            <h2>9</h2>
+            <div class="c">C</div>
+            <h2>1</h2>
+            <h2>2</h2>
+            <h2>3</h2>
+            <h2>4</h2>
+            <h2>5</h2>
+            <h2>6</h2>
+            <h2>7</h2>
+            <h2>8</h2>
+            <h2>9</h2>
+        </div>
+    </div>
 </body>
 
 </html>

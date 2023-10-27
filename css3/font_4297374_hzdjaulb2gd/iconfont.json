@@ -1,0 +1,37 @@
+{
+  "id": "4297374",
+  "name": "web",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "37723826",
+      "name": "标签",
+      "font_class": "biaoqian",
+      "unicode": "e640",
+      "unicode_decimal": 58944
+    },
+    {
+      "icon_id": "37723830",
+      "name": "收藏夹",
+      "font_class": "shoucangjia",
+      "unicode": "e641",
+      "unicode_decimal": 58945
+    },
+    {
+      "icon_id": "37723831",
+      "name": "天气",
+      "font_class": "tianqi",
+      "unicode": "e642",
+      "unicode_decimal": 58946
+    },
+    {
+      "icon_id": "37723832",
+      "name": "音乐",
+      "font_class": "yinle",
+      "unicode": "e643",
+      "unicode_decimal": 58947
+    }
+  ]
+}

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .outer {
+            width: 200px;
+            height: 200px;
+            border: 2px solid black;
+            margin: 0 auto;
+            margin-top: 100px;
+            position: relative;
+        }
+
+        /* .inner {
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+            transform: translateX(202px) translateY(202px);
+            transform: translate(50px,50px);
+         } */
+        /* 浏览器对translate有优化，处理位移的效率比定位高 */
+        .inner {
+            width: 60px;
+            height: 60px;
+            background-color: orange;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-30px, -30px);
+        }
+
+        .boxing {
+            /* 元素居中效果 */
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .boxout {
+            width: 200px;
+            height: 200px;
+            border: 2px solid black;
+            margin: 0 auto;
+            margin-top: 100px;
+        }
+
+        .boxin {
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+            /* *数字， >1放大 */
+            transform: scaleX(1.5) scaleY(1.5);
+            transform: scale(1.5);
+            transform: scale(-1.5);
+            transform: scale(2);
+            /* scale渲染，会突破限制，比如缩放让字体大小越过12px的下限限制 */
+        }
+
+        .container {
+            width: 200px;
+            height: 200px;
+            background-color: deepskyblue;
+            transform: rotateZ(30deg);
+            transform: rotate(-30deg);
+        }
+
+        .spr {
+            width: 200px;
+            height: 200px;
+            background-color: deepskyblue;
+            transform: skew(30deg, -10deg);
+        }
+
+        .mulp {
+            width: 200px;
+            height: 200px;
+            background-color: deepskyblue;
+            transform: scale(0.5) translate(100px, 100px) rotate(20deg);
+            /* 顺序是有要求的！ */
+            /* 旋转之后，坐标系也随着变换而变化的 */
+            /* 旋转放最后比较稳妥，因为改变了坐标系*/
+        }
+
+        .cp {
+            width: 200px;
+            height: 200px;
+            background-color: deepskyblue;
+            /* 改变原点 */
+            transform-origin: left top;
+
+            transform-origin: 50px 50px;
+            /* transform里面用的是本体元素的长宽高 */
+            transform-origin: 25% 25%;
+
+            transform-origin: left;/*默认在左边中点*/
+
+
+            /* 变换原点对旋转是由影响的 */
+            transform: scale(0deg);
+            /* 位移参考原点，对位移没有影响 */
+        }
+    </style>
+</head>
+
+
+<body>
+    <!-- 位移 -->
+    <div class="outer">
+        <div class="inner">你好阿</div>
+    </div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div class="outer">
+        <div class="inner"></div>
+    </div>
+
+    <div class="boxout">
+        <div class="boxin"></div>
+    </div>
+
+    <div class="outer">
+        <div class="container"></div>
+    </div>
+
+    <div class="outer">
+        <div class="spr"></div>
+    </div>
+
+    <div class="outer">
+        <div class="mulp"></div>
+    </div>
+    <div class="outer">
+        <div class="cp"></div>
+    </div>
+</body>
+
+</html>

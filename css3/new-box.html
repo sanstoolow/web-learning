@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1 {
+            width: 200px;
+            height: 200px;
+            padding: 5px;
+            background-color: skyblue;
+            border: 5px solid black;
+            box-sizing: content-box;
+        }
+        .box2 {
+            width: 200px;
+            height: 200px;
+            padding: 5px;
+            background-color: green;
+            border: 5px solid black;
+            box-sizing: border-box;
+            /* border-box指明大小就是盒子的大小，压缩内容区 */
+        }
+        .box3 {
+            width: 200px;
+            height: 200px;
+            padding: 5px;
+            background-color: skyblue;
+            border: 5px solid black;
+            box-sizing: content-box;
+            overflow: hidden;
+            /* resize必须需要overflow随便的值都可以 */
+            resize: both;
+            /* horizontal 表面水平可调 vertical 表面竖直可调*/
+        }
+        .box4 {
+            width: 200px;
+            height: 200px;
+            background-color: gray;
+            margin: 0 auto;
+            /* 两个值的含义：水平垂直位置 */
+            /* box-shadow: 10px 10px; */
+            /* 三个值的含义+颜色 */
+            /* box-shadow: 10px 10px blue; */
+            /* 三个值的含义+模糊程度 */
+            /* box-shadow: 10px 10px 10px; */
+            /* 四个值+模糊+颜色 */
+            /* box-shadow: 10px 10px 20px blue; */
+            /* 五个值+模糊+外延+颜色 */
+            /* box-shadow: 10px 10px 20px 5px blue; */
+            /* 六个值+模糊+外延+颜色+内外阴影 */
+            /* box-shadow: 10px 10px 20px 5px blue inset ; */
+            position: relative;
+            top: 0;
+            left: 0;
+            transition: 1s linear all;
+        }
+        .box4:hover {
+            box-shadow: 0px 0px 20px black;
+            top: -1px;
+            left: 0;
+        }
+        .box5 {
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+            font-size: 40px;
+            /* 0-1从透明到不透明 */
+            opacity: 0.5;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4"></div>
+    <div class="box5">hello</div>
+</body>
+</html>

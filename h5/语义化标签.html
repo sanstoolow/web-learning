@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .mask {
+            background-color: rgba(0, 0, 0, 0.632);
+            position: fixed;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+        }
+
+        .dialog {
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background-color: green;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            margin: auto;
+            font-size: 40px;
+            text-align: center;
+            line-height: 400px;
+        }
+
+        span {
+            border: 1px solid white;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>header头部</li>
+        <li>footer底部</li>
+        <li>nav导航</li>
+        <li>article文章，帖子</li>
+        <li>section部分</li>
+        <li>aside侧边栏</li>
+    </ul>
+    <section>article里面可以有多个section;section强调的是分段或分块,如果你想要内容分成几个部分,可以使用section;article会更加独立</section>
+
+
+    <!-- 头部 -->
+    <header>
+        <h1>dingzhen</h1>
+    </header>
+    <hr>
+    <!-- 主导航 -->
+    <nav>
+        <ul>
+            <li><a href="#">ddd</a></li>
+            <li><a href="#">dddd</a></li>
+            <li><a href="#">ddd</a></li>
+            <li><a href="#">ddd</a></li>
+        </ul>
+    </nav>
+    <!-- 主要内容 -->
+    <div class="page-content">
+        <!-- 文章 -->
+        <article>
+            <h2>如何一夜暴富</h2>
+            <section>
+                <h3>第一种方式，做梦</h3>
+                <p>做梦：阿达达瓦达瓦达瓦</p>
+                <h3>买彩票</h3>
+                <p>adwada</p>
+                <h3>dawad</h3>
+                <p>dadwa</p>
+            </section>
+        </article>
+        <!-- 侧边栏导航 -->
+        <aside style="float: right;">
+            <nav>
+                <ul>
+                    <li><a href="#">dads</a></li>
+                    <li><a href="#">dads</a></li>
+                    <li><a href="#">dads</a></li>
+                    <li><a href="#">dads</a></li>
+                    <li><a href="#">dads</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <hr>
+        <!-- 页脚 -->
+        <footer>
+            <nav>
+                <a href="#">dad</a>
+                <a href="#">dad</a>
+                <a href="#">dad</a>
+                <a href="#">dad</a>
+                <a href="#">dad</a>
+                <a href="#">dad</a>
+            </nav>
+        </footer>
+    </div>
+
+    <hr>
+    <hr>
+    <span>手机电量</span>
+    <meter max="100" min="0" value="10" low="20" high="80" optimum="90"></meter>
+    <span>当前进度</span>
+    <progress max="100" value="80"></progress>
+    <hr>
+    <hr>
+    <form action="#">
+        <input type="text" list="mydata">
+        <button>搜索
+        </button>
+    </form>
+    <datalist id="mydata">
+        <option value="kkkk">ddd</option>
+        <option value="kkkk">ddd</option>
+        <option value="kkkk">ddd</option>
+        <option value="kkkk">ddd</option>
+        <option value="kkkk">ddd</option>
+    </datalist>
+    <details>
+        <summary>如何玩原神</summary>
+        <p>原神，启动！！！！</p>
+    </details>
+    <hr>
+    <hr>
+    <ruby>
+        <span>魑魅魍魉</span>
+        <rt>chi mei wang liang</rt>
+    </ruby>
+    <p>Lorem ipsum dolor <mark>amet</mark> consectetur adipisicing elit. Impedit blanditiis, illo est aut nesciunt
+        voluptas laboriosam ratione dicta distinctio temporibus ipsa autem vel reprehenderit nulla qui, dolorum
+        voluptatem eum ut.</p>
+
+    <hr>
+    <hr>
+    <form action="#" novalidate不做校验>
+        账号：<input type="text" name="account" placeholder="请输入账号" required autofocus autocomplete="on" pattern="\w{6}">
+        <br>
+        密码：<input type="text" name="pwd" placeholder="请输入密码" required>
+        <br>
+        性别
+        <input type="radio" value="male" name="gender">男
+        <input type="radio" value="female" name="gender">女
+        爱好：
+        <input type="checkbox" value="smoke" name="hobby">抽烟
+        <input type="checkbox" value="drink" name="hobby" required>喝酒
+        <input type="checkbox" value="perm" name="hobby">烫头
+        其他：<textarea name="other" id="" cols="30" rows="10" placeholder="请输入内容" required></textarea>
+        <button>提交</button>
+        <p>input新增 的属性值</p>
+        <input type="text" name="" id="">
+        <input type="password">
+        <input type="submit" name="" id="">
+        <input type="reset" name="" id="">
+        <input type="hidden" name="" id="">
+        <input type="checkbox">
+        <input type="button" name="" id="">
+        <input type="radio" name="" id="">
+
+
+        <!-- new -->
+        <input type="email" name="qq-mail" id="">
+        <input type="submit" name="">
+        <input type="url" name="url-www" required id="">
+        <input type="submit" name="" id="">
+        <input type="number" name="num" step="114514" max="985211" min="-985211" required>
+        <input type="submit">
+
+        <input type="search" name="kyw">
+        <input type="submit" name="" id="">
+        <input type="tel" name="" id="">
+        <input type="submit" name="" id="" required>
+        <input type="range" name="" id="" max="80" min="20" value="60">
+        <input type="submit" name="" id="">
+        <input type="color">
+        <input type="submit">
+        <input type="date" required>
+        <input type="submit">
+        <input type="month" required>
+        <input type="submit" name="" id="">
+        <input type="week">
+        <input type="submit">
+        <input type="time">
+        <input type="submit">
+        <input type="datetime-local">
+        <input type="submit">
+
+    </form>
+    <hr>
+    <hr>
+    <video src="../kun's sources/dingzhen.mp4" width="699px" controls muted autoplay loop poster="../images/2.jpg"
+        preload="metadata"></video>
+    <hr>
+    <hr>
+    <audio id="bgm" src="../kun's sources/dingzhen.mp4" controls loop preload="auto" hidden></audio>
+    <div class="mask">
+        <div class="dialog">
+            <span>点我登录</span>
+            <span onclick="go()">随便听听</span>
+        </div>
+    </div>
+    <script>
+        function go() {
+            bgm.play()
+            mask.style.display = 'none'
+        }
+    </script>
+</body>
+
+</html>

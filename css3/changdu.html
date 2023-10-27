@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1 {
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .box2 {
+            /* vw指视口宽的百分比 */
+            height: 80vw;
+            width: 80vw;
+            /* 80vw是值视口宽度的80% */
+            /* 类似的vh是指视口高度的百分比 */
+            height: 20vh;
+            width: 20vh;
+            background-color: green;
+        }
+        .box3 {
+            height: 20vmax;
+            width: 20vmax;
+            /* 找到宽或者高的大的那一个替换进行百分比计算 */
+        }
+        /* 最后还有一个rem，采取根元素的字体大小比例 */
+    </style>
+</head>
+
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+</body>
+
+</html>

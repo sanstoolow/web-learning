@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 600px;
+            height: 400px;
+            background-color: skyblue;
+            border: 1px solid black;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box" contenteditable="true" spellcheck="true">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam qui consectetur autem ex quae, hic sit beatae sed fugit, repellat accusamus quaerat, magni consequuntur deleniti? Et sed quod nam illo!</div>
+    <div class="box" draggable="true" ondragend="go(event)">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam qui consectetur autem ex quae, hic sit beatae sed fugit, repellat accusamus quaerat, magni consequuntur deleniti? Et sed quod nam illo!</div>
+    <div class="box" contextmenu=""></div>
+    <div class="box" data-b="wcsndm"></div>
+    <script>
+        function go(e){
+            alert(e,y)
+        }
+    </script>
+</body>
+</html>

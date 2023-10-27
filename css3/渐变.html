@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+            float: left;
+            margin: 20px;
+        }
+
+        .box1 {
+            /* 默认从上到下 */
+            background-image: linear-gradient(red, green, black);
+        }
+        .box11 {
+            /* 默认从上到下 */
+            /* 在没有发生渐变的区域重新开始渐变,即纯色区域 */
+            background-image: repeating-linear-gradient(red, green, black);
+        }
+
+        .box2 {
+            /* 默认从上到下 */
+            background-image: linear-gradient(to right top, red, green, black);
+        }
+
+        .box3 {
+            /* 默认从上到下 */
+            background-image: linear-gradient(20deg, red, green, black);
+        }
+        .box4 {
+            /* 默认从上到下 */
+            /* 到10px必须是红色，到50px必须是绿色，到150px必须是黑色 */
+            background-image: linear-gradient(60deg, red 10px, green 50px, black 150px);
+        }
+        .box5 {
+            /* 默认从上到下 */
+            /* 到10px必须是红色，到50px必须是绿色，到150px必须是黑色 */
+            background-image: linear-gradient(60deg, red 10px, green 50px, black 150px);
+            text-align: center;
+            line-height: 300px;
+            font-size: 20px;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+        .box6 {
+            background-image: radial-gradient(red,black,green);
+            /* 容器的比例对应渐变的效果，不是正方形的就是椭圆 */
+        }
+        .box7 {
+            background-image: radial-gradient(at  top left,yellow,red);
+        }
+        .box8 {
+            background-image: radial-gradient(at 100px 20px,yellow,red);
+        }
+        .box9 {
+            background-image: radial-gradient(circle at 100px 150px,blue 100px,white);
+        }
+        .box22 {
+            background-image: repeating-radial-gradient(circle at 100px 150px,blue 100px,white);
+        }
+        .box10 {
+            background-image:  radial-gradient(100px 20px,blue,skyblue);
+        }
+        .box33 {
+            padding: 20px;
+            /* 小技巧写信纸 */
+            background-image: repeating-linear-gradient(transparent 0px,transparent 29px,gray 30px);
+            background-clip: content-box;
+        }
+        .box44 {
+            border-radius: 50%;
+            border: 0;
+            background-image: radial-gradient(at 80px 80px,white,gray);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box box1">1</div>
+    <div class="box box2">2</div>
+    <div class="box box3">3</div>
+    <div class="box box4">4</div>
+    <div class="box box5">你好阿</div>
+    <div class="box box6">1</div>
+    <div class="box box7">2</div>
+    <div class="box box8">3</div>
+    <div class="box box9">4</div>
+    <div class="box box10">你好阿</div>
+    <div class="box box11">1</div>
+    <div class="box box22">2</div>
+    <div class="box box33">3</div>
+    <div class="box box44">4</div>
+    <div class="box box55">你好阿</div>
+</body>
+
+</html>
