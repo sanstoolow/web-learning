@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .outer {
+        width: 1000px;
+        height: 600px;
+        background-color: #888;
+        /* flex布局，伸缩容器 */
+        /* 容易的子元素变成flex元素，但是孙子不是！！ */
+        display: flex;
+        /* display: inline-flex; */
+        /* 加上了inline! */
+        margin: 0 auto;
+
+        /* 主轴方向 */
+        /* 默认不动 */
+        /* flex-direction: row; */
+        /* flex-direction: row-reverse; */
+        /* flex-direction: column; */
+        /* flex-direction: column-reverse; */
+
+        /* 主轴换行 */
+        flex-wrap: wrap;
+        /* flex-wrap: wrap-reverse; */
+        /* flex-wrap: initial; */
+
+        /* fles-flow复合 少用 */
+        /* flex-flow: row wrap; */
+        overflow: hidden;
+      }
+      .outering {
+        /* padding-top: 100px; */
+        width: 1000px;
+        height: 600px;
+        background-color: #888;
+        display: flex;
+        margin: 0 auto;
+        flex-wrap: wrap;
+
+        /* 主轴起始位置 */
+        justify-content: flex-start;
+        /* 主轴结束位置 */
+        justify-content: flex-end;
+        /* 居中 */
+        justify-content: center;
+        /* 均匀分布，项目距离与边距2倍 */
+        justify-content: space-around;
+        /* 均匀分布，但是项目水平填满 */
+        justify-content: space-between;
+        /*  绝对的均匀分布，每一个距离都相等*/
+        justify-content: space-evenly;
+      }
+      .out {
+        width: 1000px;
+        height: 600px;
+        background-color: #888;
+        display: flex;
+        margin: 0 auto;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+      }
+      .inner2 {
+        /* 设置元素在主轴上的排列长度 */
+        flex-basis: 300px;
+        flex-basis: auto;
+      }
+      .outering-side-single {
+        width: 1000px;
+        height: 600px;
+        background-color: #888;
+        display: flex;
+        margin: 0 auto;
+        flex-wrap: wrap;
+        /* 侧轴对齐 */
+        align-items: flex-start;
+        align-items: flex-end;
+        align-items: center;
+        align-items: baseline; /*几乎不用，看内容的字对齐*/
+        /* 如果项目不给高度 stretch会拉伸填充所有父容器，默认值 */
+        align-items: stretch;
+      }
+      .outering-side-plenty {
+        width: 1000px;
+        height: 900px;
+        background-color: #888;
+        display: flex;
+        margin: 0 auto;
+        flex-wrap: wrap;
+
+        /* 多行对齐方式 */
+        align-content: flex-start;
+        align-content: flex-end;
+        align-content: center;
+        /* 主轴的间隔分布切换到侧轴上面 */
+        align-content: space-around;
+        align-content: space-between;
+        align-content: space-evenly;
+        /* 不给高度，会拉伸平分上下 */
+        align-content: stretch;
+      }
+      .inner {
+        width: 200px;
+        height: 200px;
+        background-color: skyblue;
+        border: 1px solid black;
+        box-sizing: border-box;
+        /* 只要是伸缩项目，变成了块！比如span也会变成块 */
+      }
+
+      /* 元素按主轴顺序来排列 */
+    </style>
+  </head>
+  <body>
+    <div class="outer">
+      <div class="inner">1</div>
+      <div class="inner">2</div>
+      <div class="inner">3</div>
+      <div class="inner">4</div>
+      <div class="inner">5</div>
+      <div class="inner">6</div>
+      <div class="inner">7</div>
+      <div class="inner">8</div>
+      <div class="inner">8</div>
+      <div class="inner">8</div>
+      <div class="inner">8</div>
+      <div class="inner">8</div>
+      <div class="inner">8</div>
+    </div>
+    <hr />
+    <hr />
+    <hr />
+    <div class="outering">
+      <div class="inner">1</div>
+      <div class="inner">2</div>
+      <div class="inner">3</div>
+    </div>
+    <hr />
+    <hr />
+    <hr />
+    <div class="outering-side-single">
+      <div class="inner">1</div>
+      <div class="inner">2</div>
+      <div class="inner">3</div>
+      <div class="inner">4</div>
+    </div>
+    <hr />
+    <hr />
+    <hr />
+    <div class="outering-side-plenty">
+      <div class="inner">1</div>
+      <div class="inner">2</div>
+      <div class="inner">3</div>
+      <div class="inner">4</div>
+      <div class="inner">5</div>
+      <div class="inner">6</div>
+      <div class="inner">7</div>
+      <div class="inner">8</div>
+    </div>
+    <hr>
+    <hr>
+    <hr>
+    <div class="out">
+      <div class="inner">1</div>
+      <div class="inner inner2">2</div>
+      <div class="inner">3</div>
+    </div>
+  </body>
+</html>

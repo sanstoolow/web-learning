@@ -1,77 +1,93 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-        h1 {
-            font-size: 40px;
-            text-align: center;
-            /* 文本阴影，类似于边框 */
-            text-shadow: 3px 3px 2px orange;
-            /* 浅色背景上上阴影 */
-            color: white;
-            text-shadow: 0px 0px 5px black;
-        }
+      h1 {
+        font-size: 40px;
+        text-align: center;
+        /* 文本阴影，类似于边框 */
+        text-shadow: 3px 3px 2px orange;
+        /* 浅色背景上上阴影 */
+        color: white;
+        text-shadow: 0px 0px 5px black;
+      }
 
-        p {
-            font-size: 30px;
-            /* text-decoration-line: overline; */
-            /* text-decoration-style: dashed; */
-            /* text-decoration-color: blue; */
-            text-decoration: overline dashed blue;
-            /* 文本描边 */
-            -webkit-text-stroke: yellow 1px;
-            color: white;
-        }
-        div {
-            width: 400px;
-            height: 400px;
-            border: 1px solid black;
-            font-size: 20px;
-            /* 这样就类似于pre元素了 */
-            white-space: pre-wrap;
-            /* pre pre-wrap是不一样的代wrap舒服一些 */
-            /* pre-line pre-wrap不一样line忽略空格，直接换行 */
-            /* nowrap直接不换行，但是溢出的时候，用overflow直接解决 */
-        }
+      p {
+        font-size: 30px;
+        /* text-decoration-line: overline; */
+        /* text-decoration-style: dashed; */
+        /* text-decoration-color: blue; */
+        text-decoration: overline dashed blue;
+        /* 文本描边 */
+        -webkit-text-stroke: yellow 1px;
+        color: white;
+      }
+      div {
+        width: 400px;
+        height: 400px;
+        border: 1px solid black;
+        font-size: 20px;
+        /* 这样就类似于pre元素了 */
+        white-space: pre-wrap;
+        /* pre pre-wrap是不一样的代wrap舒服一些 */
+        /* pre-line pre-wrap不一样line忽略空格，直接换行 */
+        /* nowrap直接不换行，但是溢出的时候，用overflow直接解决 */
+      }
 
-        ul {
-            width: 400px;
-            height: 400px;
-            border: 1px solid black;
-            list-style: none;
-            padding-left: 0;
-            font-size: 20px;
-        }
-        li {
-            overflow: hidden;
-            margin-bottom: 10px;
-            padding: 10px;
-            white-space: nowrap;
-            /* 用的话必须是overflow存在非visialble */
-            text-overflow: ellipsis;
-        }
+      ul {
+        width: 400px;
+        height: 400px;
+        border: 1px solid black;
+        list-style: none;
+        padding-left: 0;
+        font-size: 20px;
+      }
+      li {
+        overflow: hidden;
+        margin-bottom: 10px;
+        padding: 10px;
+        white-space: nowrap;
+        /* 用的话必须是overflow存在非visialble */
+        text-overflow: ellipsis;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <h1>你好阿</h1>
-    <div>山回路转不见君
-        雪上空留马行处</div>
-
+    <div>山回路转不见君 雪上空留马行处</div>
 
     <ul>
-        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ipsum iusto repellat reprehenderit eos perferendis in consequuntur et modi cupiditate.</li>
-        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ipsum iusto repellat reprehenderit eos perferendis in consequuntur et modi cupiditate.</li>
-        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ipsum iusto repellat reprehenderit eos perferendis in consequuntur et modi cupiditate.</li>
-        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ipsum iusto repellat reprehenderit eos perferendis in consequuntur et modi cupiditate.</li>
-        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ipsum iusto repellat reprehenderit eos perferendis in consequuntur et modi cupiditate.</li>
+      <li>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ipsum
+        iusto repellat reprehenderit eos perferendis in consequuntur et modi
+        cupiditate.
+      </li>
+      <li>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ipsum
+        iusto repellat reprehenderit eos perferendis in consequuntur et modi
+        cupiditate.
+      </li>
+      <li>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ipsum
+        iusto repellat reprehenderit eos perferendis in consequuntur et modi
+        cupiditate.
+      </li>
+      <li>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ipsum
+        iusto repellat reprehenderit eos perferendis in consequuntur et modi
+        cupiditate.
+      </li>
+      <li>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ipsum
+        iusto repellat reprehenderit eos perferendis in consequuntur et modi
+        cupiditate.
+      </li>
     </ul>
 
     <p>你好阿</p>
-</body>
-
+  </body>
 </html>
