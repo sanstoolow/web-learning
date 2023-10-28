@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .outer {
+            width: 1000px;
+            height: 900px;
+            background-color: gray;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+        }
+        .inner {
+            width: 200px;
+            height: 200px;
+            background-color: deepskyblue;
+            border: 1px solid black;
+            box-sizing: border-box;
+            flex-grow: 1;
+            /* 一行足够为1+1+1=3 每一个均分三分之一余下的空间 */
+            /* 可以定义为放大比例 */
+            flex-shrink: 1;
+            /* 在不换行的情况下，如果放不下三个div，那么就会缩小，但是这个时候就不是按类似grow的比例来压缩了,按shrink加权的方式来压缩*/
+            /* 收缩的极限在保留内容 */
+
+            /* flex符合属性  grow shrink basis*/
+            flex: 1 1 100px;
+            /* 可以拉伸，可以压缩，无基准长度  下面两行等价*/
+            flex: 1 1 auto;
+            flex: auto;
+
+            /* 没有宽度，直接拉伸评分宽度 下面两行等价*/
+            flex: 1 1 0;
+            flex: 1;
+
+            /* 无拉伸， 无压缩，不设置基准 下面等价*/
+            flex: 0 0 auto;
+            flex: none;
+
+            /* 默认值 */
+            flex: 0 1 auto;
+            flex: 0 auto;
+        }
+        /* .inner1 {
+            flex-grow: 1;
+        } */
+        .inner2 {
+            /* flex-grow: 2; */
+            width: 300px;
+        }
+        /* .inner3 {
+            flex-grow: 3;
+        } */
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner inner">1</div>
+        <div class="inner inner2">2</div>
+        <div class="inner inner3">3</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .outer {
+        width: 1000px;
+        height: 600px;
+        background-color: #888;
+        /* flex布局，伸缩容器 */
+        /* 容易的子元素变成flex元素，但是孙子不是！！ */
+        display: flex;
+        /* display: inline-flex; */
+        /* 加上了inline! */
+        margin: 0 auto;
+
+        /* 主轴方向 */
+        /* 默认不动 */
+        /* flex-direction: row; */
+        /* flex-direction: row-reverse; */
+        /* flex-direction: column; */
+        /* flex-direction: column-reverse; */
+
+        /* 主轴换行 */
+        flex-wrap: wrap;
+        /* flex-wrap: wrap-reverse; */
+        /* flex-wrap: initial; */
+
+        /* fles-flow复合 少用 */
+        /* flex-flow: row wrap; */
+        overflow: hidden;
+      }.inner {
+        width: 200px;
+        height: 200px;
+        background-color: skyblue;
+        border: 1px solid black;
+        box-sizing: border-box;
+        /* 只要是伸缩项目，变成了块！比如span也会变成块 */
+      }
+      .inner2 {
+        /* 谁的order值小就先排谁 */
+        order: -1;
+        /* self自行单独排位 */
+        align-self: flex-end;
+      }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner">1</div>
+        <div class="inner inner2">2</div>
+        <div class="inner">3</div>
+    </div>
+</body>
+</html>
