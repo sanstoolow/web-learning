@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+        }
+        .outer {
+            width: 600px;
+            background-color: gray;
+        }
+        .box {
+            margin: 10px;
+            width: 150px;
+            height: 150px;
+            /* float: left; */
+            /* position: absolute; */
+            /* display: table; */
+            /* display: inline-block; */
+            overflow: auto;
+            column-count: 4;
+
+
+            display: flow-root;
+        }
+        .box1 {
+            background-color: orange;
+        }
+        .box2 {
+            background-color: green;
+        }
+        .box3 {
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <p>bfc是元素的一种比较特殊的功能，对于特定元素 的某些设置可以开启这样的属性</p>
+    <ul>
+        <li>bfc元素不会出现子元首尾的margin塌陷问题</li>
+        <li>bfc元素开启浮动也不会出现脱离文档流之后会被遮盖的问题</li>
+        <li></li>
+    </ul>
+    <p>一下元素有bfc已开启</p>
+    <ul>
+        <li>根元素</li>
+        <li>浮动元素</li>
+        <li>绝对定位元素，固定定位元素</li>
+        <li>行内块元素</li>
+        <li>表格单元格</li>
+        <li>overflow值不是visiable的元素</li>
+        <li>伸缩项目</li>
+        <li>多列容器</li>
+        <li>column-span为all的元素</li>
+        <li>display设置为flow-root</li>
+        <li></li>
+        <li></li>
+    </ul>
+    <div class="outer">
+        <div class="box box1"></div>
+        <div class="box box2"></div>
+        <div class="box box3"></div>
+    </div>
+</body>
+</html>
